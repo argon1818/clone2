@@ -1,0 +1,290 @@
+
+<app-sidbaradmin></app-sidbaradmin>
+<app-userd-navbar></app-userd-navbar>
+ <ngx-loading [show]="loading"  [config]="{fullScreenBackdrop:true, tertiaryColour: '#9516d8c2' , primaryColour: '#9516d8c2'}" ></ngx-loading>
+
+
+<div>
+  <div class="row justify-content-center align-items-center">
+      <div  class="col-md-9" id="forNewFormStyle" style="height:70% !important; top:100px " >
+      <div   id="login-form" class="form "  style="border: 1px solid #0f0e0f; border-radius: 1rem; ">        
+      <div class="leftAndRight">  
+        <div class="text-right text-info mt-3 mr-3" id="topRightText" style="font-size:13pt; color:#9400D3 !important"><b   style="text-decoration:none; font-size:12pt; color:#9400D3 !important">  <i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp;<b> ثبت زمان های ویزیت دکتر {{doctor_name}} {{doctor_surname}}</b></b></div>
+        <a (click)="ReturnToback()" class="text">بازگشت</a>
+        </div>
+          <div class="container mt-4"  >   
+
+
+          <mat-tab-group id="morningAndEvening" style="text-align: right; margin: 10px 30px;">
+
+           <mat-tab    label="نوبت صبح">
+             <div class="week">
+<!-------------------------------------------------------------------->
+               <form class="shanbe "  style="margin-bottom:30px" [formGroup] = "AddturnShanbeForm" (ngSubmit) = "addShanbe()">
+                   <div class="right">
+                   <div class="day">
+                       تاریخ
+                     </div>
+                  
+                     <div class="date" >
+                        <input type="text"  formControlName = "day1" name="day1"  id="forCalenderStyels" 
+                         #datepickerInput1 (input) = "GetDateFunction_0($event)" />
+                              <ng-persian-datepicker id="persianCalender"
+                              [input]="datepickerInput1"
+                              [dateFormat]="'jYYYY-jMM-jDD'"
+                              [uiTheme]="'default'"
+                              [timeMeridian]="false"
+                              [uiContainerWidth]="'100px'"
+                              [uiAutoPosition]="false"
+                              [timeEnable]="false"
+                              style="position: relative;width: 150px; height:100px !important;margin-right: 60px;"
+                              ></ng-persian-datepicker>
+                      </div>
+                   </div>
+                   <div class="left">
+                      <div class="firstLine">
+                        <div class="start">
+                          <div class="text">زمان شروع:</div>
+                          <input   type="text"  name="start1" mask="hh:mM"   formControlName = "start1"  id="start" placeholder="" (input) = "GetStartHourFunction_0($event)">
+                        </div>
+                        <div class="end">
+                          <div class="text">زمان پایان:</div>
+                          <input type="text" mask="hh:mM" name="end1" formControlName = "end1"  id="end" placeholder="" (input) = "GetEndHourFunction_0($event)">
+                        </div>
+                        <div class="turn">
+                          <div class="text">تعدادنوبت:</div>
+                          <input  type="number" mask="000" name="number1" formControlName = "number1"  id="turn" placeholder="" (input) = "GetTurnFunction_0($event)">
+                        </div>
+                        <div class="btns">
+                                    <button type="submit" [hidden]=submit_0 class="btn btn-primary mb-3 mx-2 mt-3 btn2 btn1" style="background-color: #9400D3;font-size: 10pt; padding: 5px 25px; width:100px; border: 1px solid #9516d8c2;">
+                                        <a class="text-decoration-none text-white">
+                                            تایید
+                                        </a>
+                                    </button>   
+                                    <button  (click)="ReturnTo0()" type="button" [hidden]=submit_0  class="btn btn-primary mb-3 mx-2 mt-3 btn1 btn2" style="width:100px;background-color: #9400D3;font-size: 10pt; padding: 5px 25px;     border: 1px solid #9516d8c2;">
+                                        <a class="text-decoration-none text-white">
+                                              انصراف
+                                        </a>                        
+                                    </button> 
+                        </div>
+                      </div>
+                   </div>
+               </form>
+
+
+
+
+ <div class="container" [hidden]=search_btn id="search1">  
+        <div  style="font-size:9pt; color:black !important"><b   style="text-decoration:none; font-size:10pt; color:blue !important"> <i class="fa fa-th" aria-hidden="true"></i> <b> لیست زمان های  ثبت شده امروز توسط شما   </b></b></div>
+ <!--   
+              <input type="text" style="direction:rtl;font-size: 10pt;" class="form-control    mb-4" placeholder="جستجو" [(ngModel)]='filterTerm'> 
+              -->
+              <div class="table-responsive">
+ 
+                 <table class="table mt-3" datatable [dtOptions]="dtOptions" style="direction:rtl; text-align:center;font-size: 9pt !important; ">
+                    <thead>
+                      <tr >
+                        <th> ردیف</th>
+                        <th>تاریخ </th>
+                        <th>شیفت </th>
+                        <th>زمان شروع </th>
+                        <th>زمان پایان</th>
+                        <th>تعداد نوبت </th>
+                        <th>تعداد نوبت رزرو شده   </th>  
+  
+                        <th>ویرایش وقت </th>
+                        <th> حذف زمان </th>      
+                      </tr>
+                    </thead>
+                    <tbody>
+    
+                    <tr *ngFor="let item of list_turn| filter:filterTerm| paginate: configTable; let i=index;">
+                      <td>
+                    {{i+1 }}
+
+                    </td>
+           
+                      <td>
+                      {{item.date_turn }}
+                      </td>
+                          <td>
+                          {{item.shift }}
+                      </td>
+                          <td>
+                          {{item.start_time }}
+                      </td>
+                          <td>
+                          {{item.end_time }}
+                      </td>
+                                       <td>
+                          {{item.num_turn }}
+                      </td>
+                          <td>
+                          {{item.full_turn }}
+                      </td>
+                                <td>  
+                        <a  (click)="EditTurn(item.id)"   style="text-decoration:none; font-size:13pt; color:#9400D3 !important"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> </a>
+                      </td>
+                  
+                   
+                      <td> 
+                        <a   (click)="DeleteTurn(item.id,item.date_turn)" style="text-decoration:none; font-size:13pt; color:#9400D3 !important"> <i class="fa fa fa-trash" aria-hidden="true"></i> </a>
+
+                      </td>
+
+                    </tr> 
+                    <td colspan="4">    
+                </tbody>
+              </table>
+            </div>  
+          </div>                        
+
+  
+<!-------------------------------------------------------------------->
+
+              
+             </div>
+           </mat-tab>
+  <mat-tab label="نوبت عصر"> 
+
+   <div class="week">
+<!-------------------------------------------------------------------->
+               <form class="shanbe" [formGroup] = "AddturnShanbeFormA" (ngSubmit) = "addShanbeA()">
+                   <div class="right">
+                     <div class="day">
+                       تاریخ
+                     </div>
+                     <div class="date" >
+                        <input type="text"  formControlName = "day1" name="day1"  id="forCalenderStyels" 
+                         #datepickerInput2 (input) = "GetDateFunction_0A($event)" />
+                              <ng-persian-datepicker id="persianCalender"
+                              [input]="datepickerInput2"
+                              [dateFormat]="'jYYYY-jMM-jDD'"
+                              [uiTheme]="'default'"
+                              [timeMeridian]="false"
+                              [uiContainerWidth]="'100px'"
+                              [uiAutoPosition]="false"
+                              [timeEnable]="false"
+                              style="position: relative;width: 150px; height:100px !important;margin-right: 60px;"
+                              ></ng-persian-datepicker>
+                      </div>
+                   </div>
+                   <div class="left">
+                      <div class="firstLine">
+                        <div class="start">
+                          <div class="text">زمان شروع:</div>
+                          <input   type="text"  name="start1" mask="hh:mM"   formControlName = "start1"  id="start" placeholder="" (input) = "GetStartHourFunction_0A($event)">
+                        </div>
+                        <div class="end">
+                          <div class="text">زمان پایان:</div>
+                          <input type="text" mask="hh:mM" name="end1" formControlName = "end1"  id="end" placeholder="" (input) = "GetEndHourFunction_0A($event)">
+                        </div>
+                        <div class="turn">
+                          <div class="text">تعدادنوبت:</div>
+                          <input  type="number" mask="000" name="number1" formControlName = "number1"  id="turn" placeholder="" (input) = "GetTurnFunction_0A($event)">
+                        </div>
+                        <div class="btns">
+                                    <button type="submit" [hidden]=submit_0A class="btn btn-primary mb-3 mx-2 mt-3 btn2" style="background-color: #9400D3;font-size: 10pt; padding: 5px 25px; width:100px; border: 1px solid #9400D3;">
+                                        <a class="text-decoration-none text-white">
+                                            تایید
+                                        </a>
+                                    </button>   
+                                             <button  [hidden]=submit_0A (click)="ReturnTo7()" type="button" class="btn btn-primary mb-3 mx-2 mt-3 btn1" style="width:100px;background-color: #9400D3;font-size: 10pt; padding: 5px 25px; border: 1px solid #9400D3;">
+                                        <a class="text-decoration-none text-white">
+                                              انصراف
+                                        </a>                        
+                                    </button> 
+                        </div>
+                      </div>
+                   </div>
+               </form>
+
+               <div class="container" [hidden]=search_btn id="search1">  
+        <div  style="font-size:9pt; color:black !important"><b   style="text-decoration:none; font-size:10pt; color:blue !important"> <i class="fa fa-th" aria-hidden="true"></i> <b> لیست زمان های  ثبت شده امروز توسط شما   </b></b></div>
+ <!--   
+              <input type="text" style="direction:rtl;font-size: 10pt;" class="form-control    mb-4" placeholder="جستجو" [(ngModel)]='filterTerm'> 
+              -->
+              <div class="table-responsive">
+ 
+                 <table class="table mt-3" datatable [dtOptions]="dtOptions" style="direction:rtl; text-align:center;font-size: 9pt !important; ">
+                    <thead>
+                      <tr >
+                        <th> ردیف</th>
+                        <th>تاریخ </th>
+                        <th>شیفت </th>
+                        <th>زمان شروع </th>
+                        <th>زمان پایان</th>
+                        <th>تعداد نوبت </th>
+                        <th>تعداد نوبت رزرو شده   </th>  
+  
+                        <th>ویرایش وقت </th>
+                        <th> حذف زمان </th>      
+                      </tr>
+                    </thead>
+                    <tbody>
+    
+                    <tr *ngFor="let item of list_turn| filter:filterTerm| paginate: configTable; let i=index;">
+                      <td>
+                    {{i+1 }}
+
+                    </td>
+           
+                      <td>
+                      {{item.date_turn }}
+                      </td>
+                          <td>
+                          {{item.shift }}
+                      </td>
+                          <td>
+                          {{item.start_time }}
+                      </td>
+                          <td>
+                          {{item.end_time }}
+                      </td>
+                                       <td>
+                          {{item.num_turn }}
+                      </td>
+                          <td>
+                          {{item.full_turn }}
+                      </td>
+                                <td>  
+                        <a  (click)="EditTurn(item.id)"   style="text-decoration:none; font-size:13pt; color:#9400D3 !important"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> </a>
+                      </td>
+                  
+                   
+                      <td> 
+                        <a   (click)="DeleteTurn(item.id,item.date_turn)" style="text-decoration:none; font-size:13pt; color:#9400D3 !important"> <i class="fa fa fa-trash" aria-hidden="true"></i> </a>
+
+                      </td>
+
+                    </tr> 
+                    <td colspan="4">    
+                </tbody>
+              </table>
+            </div>  
+          </div>                
+
+
+
+             
+
+<!-------------------------------------------------------------------->
+
+              
+             </div>   
+
+  </mat-tab>
+          </mat-tab-group>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+
+
+

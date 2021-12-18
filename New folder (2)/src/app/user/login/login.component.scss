@@ -1,0 +1,163 @@
+
+// body {
+//   margin: 0;
+//   padding: 0;
+//   background-color: rgba(255, 253, 253, 0);
+//   height: 60vh;
+// }
+
+#login .container #login-row #login-column #login-box {
+  margin-top: 120px;
+  margin-bottom: 120px;
+  max-width: 600px;
+  height: 290px;
+  border: 1px solid #ffffff;
+  border-radius: 1rem;
+  background-color: #ffffff;
+
+  // box-shadow: 0px 4px 10px 0px #c5b9b9;
+  // -webkit-box-shadow: 0px 4px 10px 0px #c5b9b9;
+}
+
+#login .container #login-row #login-column .loginboxshadow{
+  box-shadow: 0px 4px 10px 0px #c5b9b9;
+  -webkit-box-shadow: 0px 4px 10px 0px #c5b9b9;
+  height: 315px !important;
+}
+
+#login .container #login-row #login-column #login-box #login-form {
+  padding: 20px;
+  border-radius: 12px;
+}
+
+#login .container #login-row #login-column #login-box #login-form #register-link {
+  margin-top: -85px;
+}
+// Just enter the number
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+     -webkit-appearance: none;}
+
+
+
+
+// -----------------New Styles-------------------
+form .mobile1 .mobile2{
+  color: #4B4279;
+}
+
+
+form .mobile1 .mobile2::before{
+  content: '\f10b';
+  margin-left: 15px;
+  font-size: 16px;
+  color: #9516d8;
+  font-family: "Font Awesome 5 Pro";
+}
+
+form .mobile1 #username{
+  background-color: #f9f9f9;
+}
+
+form .text-info{
+  height: 50px;
+  background: url("../../../assets/images/login-page/نوباااان.svg") no-repeat;
+}
+
+
+#login .container #login-row #login-column #login-box #login-form .logInNobaan > .btn:hover {
+  background-color: #9516d8c2 !important;
+  transition: 0.3s;
+}
+
+.phone1,.phone2,.phone3{
+  text-align: right;
+}
+
+.phone1:before,.phone2:before,.phone3:before{
+  content: '\f06a';
+  font-family: "Font Awesome 5 Pro";
+}
+
+// <--------------------------form2-------------------------->
+
+
+//login-form2
+section > .login2 .container #login-row #login-column #login-box{
+  height: 300px;
+}
+
+section > .login2 .container #login-row #login-column #login-box #login-form2 #changePhoneNumber1 > p > a:first-child:hover{
+  color: #9516d8!important;
+}
+
+section > .login2 .container #login-row #login-column #login-box #login-form2 .inputform .inputform2:hover{
+  background-color: #9516d8c2!important;
+}
+
+section > .login2 .container #login-row #login-column #login-box #login-form2 .inputform > p > a{
+  cursor: pointer;
+}
+
+section > .login2 .container #login-row #login-column #login-box #login-form2 .inputform > p > a:first-child:hover{
+  color: #9516d8!important;
+}
+
+.pass1{
+  text-align: right;
+  position: absolute;
+  margin-top: 4px!important;
+}
+
+.pass1::before{
+  content: '\f06a';
+  font-family: "Font Awesome 5 Pro";
+}
+
+// <--------------------------Media Queries------------------>
+
+
+@media only screen and (max-width: 1200px) {
+
+  form .text-info{
+    background-position-x: -50px;
+  }
+
+
+}
+
+
+@media only screen and (max-width: 992px) {
+
+  form .text-info{
+    background-position-x: -160px;
+  }
+ 
+
+  //login-form2
+  section > .login2 .container #login-row #login-column #login-box{
+    height: 330px!important;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+  form .text-info{
+    background-position-x: -20px;
+  }
+
+}
+
+@media only screen and (max-width: 576px) {
+  form .text-info{
+    background: none;
+    // border-bottom: 1px inset darkviolet;
+  }
+  .pass1{
+    font-size: 12px;
+  }
+
+}
+
+

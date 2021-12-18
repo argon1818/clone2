@@ -1,0 +1,292 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '~@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$nobaan-primary: mat.define-palette(mat.$indigo-palette);
+$nobaan-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$nobaan-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$nobaan-theme: mat.define-light-theme((
+  color: (
+    primary: $nobaan-primary,
+    accent: $nobaan-accent,
+    warn: $nobaan-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($nobaan-theme);
+
+
+
+//  .iransans{
+//    font-family: iransans;
+//  }
+
+//  html,body,h1,h2,h3,h4 { height: 100%; font-family: IRANSansWeb !important;}
+// //  body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+//  .input-headline {
+//   font-size: 10px;
+//   line-height: 32px;
+//   font-weight: 400;
+//   text-align: right;
+//    }
+
+//  body,
+// .font-constant {
+//   font-size: 16px;
+// }
+
+//  h1 {
+//   font-size: 1em; /* 40px/16=2.5em */
+// }
+
+// h2 {
+//   font-size: 1em; /* 30px/16=1.875em */
+// }
+
+// p {
+//   font-size: 0.875em; /* 14px/16=0.875em */
+// }
+
+// input::placeholder{
+//   font-size: 0.7rem;
+//   color: #b0b4ba;
+// }
+// textarea::placeholder{
+//   font-size: 0.8rem;
+//   color: #b0b4ba;
+// }
+// select{
+//   height: 100px;
+// }
+
+// input{
+//   font-size: 0.9rem;
+//   color: #b0b4ba;
+// }
+// .form-group label{
+//   font-size: 0.9rem;
+//   letter-spacing: normal;
+//   color:#000;
+// }
+
+// label{
+//   font-size: 0.8rem;
+//   letter-spacing: normal;
+//   color:#000;
+// }
+
+// #toast-container > div {
+//   opacity: 1;
+// }
+// .toast {
+//   font-size: initial !important;
+//   border: initial !important;
+//   backdrop-filter: blur(0) !important;
+// }
+// .toast-success {
+//   background-color: #51A351 !important;
+// }
+// .toast-error {
+//   background-color: #BD362F !important;
+// }
+// .toast-info {
+//   background-color: #2F96B4 !important;
+// }
+// .toast-warning {
+//   background-color: #F89406 !important;
+// }
+
+
+
+
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// .toast-top-center {
+//   top: 12px;
+//   margin: 0 auto;
+//   left: 50%;
+//   margin-left: -150px;
+// }
+
+
+@import "~@ng-select/ng-select/themes/default.theme.css";
+// body {
+//   padding: 20px;
+// }
+
+//   .ng-value-container{
+//     padding-right: 14px !important;
+
+//   }
+//   .ng-value{
+//     background-color: rgb(207, 184, 245) !important;
+//   }
+//   .ng-option-selected{
+//     background-color: rgb(207, 184, 245) !important;
+//     color: white;
+//   }
+
+  //////////////////////
+  /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+
+  font-family: "vazir";
+
+  src: url("../src/assets/fonts/vazir-font-v16.1.0/Vazir.ttf");
+  // src: url("../src/assets/fonts/FontAwesome.Pro.5.15.2.Web/css/all.min.css")
+
+  font-weight: normal;
+
+  font-style: normal;
+
+  }
+
+
+
+
+//  .iransans{
+//    font-family: iransans;
+//  }
+
+html,body,h1,h2,h3,h4 { height: 100%; font-family: vazir !important;}
+
+@font-face {
+  font-family: "Font Awesome 5 Pro";
+   src: url("../src/assets/fonts/FontAwesome.Pro.5.15.2.Web/webfonts/fa-regular-400.ttf");
+}
+
+ @font-face {
+    font-family: "Font Awesome 5 Pro";
+     src: url("../src/assets/fonts/FontAwesome.Pro.5.15.2.Web/webfonts/fa-brands-400.ttf");
+ }
+
+ @font-face {
+
+  font-family: "IRANSansWeb";
+
+  src: url("../src/assets/fonts/fontIR/IRANSans-web.ttf");
+
+  font-weight: normal;
+
+  font-style: normal
+
+  }
+//   body, h4, h5, h6, span{
+//     font-family: IRANSansWeb !important;
+//     font-size: 0.7rem;
+// }
+
+  input::placeholder{
+    font-size: 10pt;
+    //color: #b0b4ba;
+  }
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  direction: rtl;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "vazir";
+}
+
+
+header {
+  background: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 10;
+  height: 90px;
+}
+
+a {
+  text-decoration: none !important;
+  color: initial !important;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+button, input, textarea {
+  font-family: inherit;
+  border: none;
+  outline: none;
+}
+
+
+#login-form{
+  box-shadow: 0px 2px 6px grey!important;
+  border: none!important;
+  margin-top: 50px;
+}
+
+//   input::-webkit-input-placeholder {
+//     font-size: 9pt;
+// }
+
+
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+  ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+  ::-webkit-scrollbar-thumb {
+  // background: #9516d8;
+    border-radius:10px;
+
+    background: linear-gradient(to top,#cb6cff,#9516d8);
+
+    // background-image: -webkit-gradient(linear, 0 0, 0 100%,
+    //                    color-stop(.5, rgba(255, 255, 255, .2)),
+    //            color-stop(.5, transparent), to(transparent));
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8c08d3;
+
+  background: linear-gradient(to top,#cb6cff,#7c00be);
+}
+
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

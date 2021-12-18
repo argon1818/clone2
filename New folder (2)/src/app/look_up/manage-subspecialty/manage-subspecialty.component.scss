@@ -1,0 +1,30 @@
+#login-form{
+    padding: 10px 0;
+    
+}
+
+.table>:not(:last-child)>:last-child>*{
+    // border-bottom-color: #9516d8!important;
+    // color: #9516d8!important;
+    border-bottom-color: #232025 !important;
+    color: #232025 !important;
+}
+
+
+input::placeholder{
+    font-size: 0.7rem !important;
+    //color: #b0b4ba;
+  }
+  textarea::placeholder{
+    font-size: 0.7rem !important;
+    //color: #b0b4ba;
+  }
+  input{
+    font-size: 10pt !important;
+    //color: #b0b4ba;
+  }
+  textarea{
+    font-size: 10pt !important;
+    //color: #b0b4ba;
+  }
+  

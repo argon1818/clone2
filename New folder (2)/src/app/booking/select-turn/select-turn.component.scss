@@ -1,0 +1,419 @@
+#login-form{
+    padding: 10px 0;
+    
+}
+
+.table>:not(:last-child)>:last-child>*{
+    // border-bottom-color: #9516d8!important;
+    // color: #9516d8!important;
+    border-bottom-color: #232025 !important;
+    color: #232025 !important;
+}
+
+#login-form{
+    padding: 10px 0;
+    
+}
+
+.table>:not(:last-child)>:last-child>*{
+    // border-bottom-color: #9516d8!important;
+    // color: #9516d8!important;
+    border-bottom-color: #232025 !important;
+    color: #232025 !important;
+}
+.example-input-label,
+.example-add-tab-button,
+.example-delete-tab-button {
+  margin: 8px;
+}
+
+#login-form{
+  padding: 10px 0;
+
+}
+
+.table>:not(:last-child)>:last-child>*{
+  // border-bottom-color: #9516d8!important;
+  // color: #9516d8!important;
+  border-bottom-color: #232025 !important;
+  color: #232025 !important;
+}
+
+
+
+//<==================================New Styles======================================>
+
+
+.mat-tab-body-content{
+  text-align: right;
+  margin: 10px 30px;
+}
+
+.week{
+  text-align: right;
+}
+
+.week > form{
+  margin: 20px 0px;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  display: flex;
+}
+
+.week > form .right{
+  // padding: 0 30px 0 40px;
+  width: 130px;
+  text-align: center;
+  margin-left: 15px;
+}
+
+.week > form .right .day{
+  margin-bottom: 14px;
+}
+
+.week > form .left{
+  border-right: 1px solid #cccccc;
+  width: 100%;
+}
+
+.week > form .left .firstLine{
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0;
+  align-items: center;
+}
+
+.week > form .left .firstLine .start,
+.week > form .left .firstLine .end{
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+
+.week > form .left .firstLine .start #start,
+.week > form .left .firstLine .end #end,
+.week > form .left .firstLine .turn #turn{
+  border: 1px solid #cccccc;
+  text-align: center;
+  width: 40%;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+
+.week > form .left .firstLine .start .text,
+.week > form .left .firstLine .end .text,
+.week > form .left .firstLine .turn .text{
+  margin: 0 10px;
+}
+
+.week > form .left .firstLine .turn{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.week > form .left .firstLine .turn #turn{
+  border: 1px solid #cccccc;
+  text-align: center;
+  width: 40%;
+  border-radius: 8px;
+}
+
+.week > form .left .firstLine .btns{
+  display: flex;
+}
+
+.week > form .left .firstLine .btns > button{
+  margin: 0 10px;
+  font-size: 14px;
+  padding: 3px 8px;
+}
+
+// .week > form .left .firstLine .btns .cancel{
+//   color: #dc3545;
+//   background-color: #fff;
+// }
+
+// .week > form .left .firstLine .btns .cancel:hover{
+//   color: #fff;
+//   background-color: #dc3545;
+// }
+
+// .week > form .left .firstLine .btns .success{
+//   width: 56px;
+//   color: #418641;
+//   background-color: #fff;
+//   border-color: #58b558;
+// }
+
+// .week > form .left .firstLine .btns .success:hover{
+//   color: #fff;
+//   background-color: #5cb85c;
+// }
+
+
+// #calender-icon::before{
+//   content: '\f784';
+//   font-family: "Font Awesome 5 Pro";
+//   cursor: pointer;
+//   position: absolute;
+//   right: -40px;
+// }
+
+#forCalenderStyels{
+  width: 132px;
+  text-align: center;
+  border: 1px solid #cccccc;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+
+#btn1:hover,
+#btn2:hover{
+  background-color: #9516d8c2 !important;
+  transition: .3s;
+}
+
+#topRightText{
+    color: #9400D3 !important;
+    margin-right: 50px !important;
+    font-weight: 300;
+}
+
+.leftAndRight{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.leftAndRight .text{
+  font-size: 11pt;
+  margin-left: 75px;
+}
+
+.leftAndRight  .text{
+  color: #9400D3 !important;
+  cursor: pointer;
+}
+
+#topRightText:hover,
+.leftAndRight  .text:hover{
+  font-weight: bold;
+}
+
+.leftAndRight  .text:after{
+  content: '\f060';
+  font-family: "Font Awesome 5 Pro";
+  margin-top: 1px;
+  margin-right: 6px;
+  position: absolute;
+
+}
+
+//<=====================================Media Queries=================================>
+
+
+// @media only screen and (max-width:1020px) {
+//   .week > form .right{
+//     width: 80px;
+//   }
+// }
+
+
+@media only screen and (max-width:1250px) {
+  .week > form .left .firstLine .start #start,
+  .week > form .left .firstLine .end #end,
+  .week > form .left .firstLine .turn #turn{
+    width: 40%;
+    padding: 5px;
+  }
+  
+  .week > form .left .firstLine .start .text,
+  .week > form .left .firstLine .end .text,
+  .week > form .left .firstLine .turn .text{
+    margin: 0 10px;
+  }
+  
+  .week > form .left .firstLine .turn{
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .week > form .left .firstLine .turn #turn{
+    border: 1px solid #cccccc;
+    text-align: center;
+    width: 40%;
+    border-radius: 8px;
+  }
+
+  .week > form .left .firstLine .btns > button{
+    width: 60px !important;
+    padding: 5px !important;
+  }
+}
+
+
+@media only screen and (max-width:1150px) {
+  .week > form .left .firstLine .start,
+  .week > form .left .firstLine .end,
+  .week > form .left .firstLine .turn{
+    flex-direction: column;
+  }
+
+  .week > form .left .firstLine .start > div,
+  .week > form .left .firstLine .end > div,
+  .week > form .left .firstLine .turn > div{
+    margin-bottom: 5px !important;
+    margin-top: -25px !important;
+  }
+
+  .week > form .left .firstLine .start #start,
+  .week > form .left .firstLine .end #end{
+    width: 80%;
+  }
+
+  .week > form .left .firstLine .turn #turn{
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width:992px) {
+
+  #forNewFormStyle{
+    width: 85%;
+  }
+
+}
+
+@media only screen and (max-width:820px) {
+
+  .week > form .left .firstLine .start,
+  .week > form .left .firstLine .end,
+  .week > form .left .firstLine .turn{
+    flex-direction: row;
+  }
+
+  .week > form .left .firstLine{
+    flex-direction: column;
+  }
+
+  
+  .week > form .left .firstLine .start,
+  .week > form .left .firstLine .end,
+  .week > form .left .firstLine .turn{
+    align-items: baseline;
+  }
+
+  .week > form .left .firstLine .start #start,
+  .week > form .left .firstLine .end #end,
+  .week > form .left .firstLine .turn #turn{
+    width: 60%;
+    margin-bottom: 10px;
+  }
+
+
+  .week > form .left .firstLine .start > input{
+    margin-right: -4px;
+  }
+
+  .week > form .left .firstLine .btns > button{
+    margin: 0 10px !important;
+    height: 30px;
+  }
+
+  .week > form{
+    align-items: center;
+  }
+
+  .week > form .right{
+    margin: -30px 0 0 15px;
+  }
+
+}
+
+
+@media only screen and (max-width:568px) {
+
+  #forNewFormStyle{
+    width: 100%;
+  }
+
+  .week > form .left{
+    border-right: none;
+  }
+
+  .week > form {
+    flex-direction: column;
+    padding-top: 60px;
+  }
+
+  .week > form .left .firstLine .start,
+  .week > form .left .firstLine .end ,
+  .week > form .left .firstLine .turn{
+    font-size: 12px;
+  }
+
+  .week > form .left .firstLine .start #start,
+  .week > form .left .firstLine .end #end,
+  .week > form .left .firstLine .turn #turn{
+    width: 40%;
+    font-size: 12px;
+  }
+
+  .week > form .left .firstLine .btns{
+    flex-direction: column;
+  }
+
+  .week > form .left .firstLine .btns > button{
+    margin: 10px !important;
+  }
+
+  .week > form .left .firstLine .start,
+  .week > form .left .firstLine .end,
+  .week > form .left .firstLine .turn{
+    flex-direction: column;
+  }
+
+  .week > form .left .firstLine .start > div,
+  .week > form .left .firstLine .end > div,
+  .week > form .left .firstLine .turn > div{
+    margin-bottom: 5px !important;
+    margin-top: -25px !important;
+  }
+
+  .week > form .left .firstLine .start,
+  .week > form .left .firstLine .end,
+  .week > form .left .firstLine .turn{
+    align-items:center;
+    margin-top: 20px;
+  }
+
+  #forCalenderStyels{
+    width: 136px;
+    margin-right: 2px;
+  }
+
+  #morningAndEvening{
+    margin: 0 !important;
+  }
+
+  #persianCalender{
+    width: 200px !important;
+    margin-right: -92px !important;
+  }
+
+ 
+
+}
+
+
+
+
+
+
+
+
+

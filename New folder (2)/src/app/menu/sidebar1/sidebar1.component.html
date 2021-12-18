@@ -1,0 +1,101 @@
+<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
+
+<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.rtl.min.css"-->
+<!--      integrity="sha384-LPvXVVAlyPoBSGkX8UddpctDks+1P4HG8MhT7/YwqHtJ40bstjzCqjj+VVVDhsCo" crossorigin="anonymous">-->
+<app-navbar-main></app-navbar-main>
+  
+<div class="whole mx-auto">
+<div class="middle">
+<div id="accordian" class="sidebar1" style="direction: rtl !important; text-align:justify; border-radius: 13px">
+
+  <div class="navbar-nav ml-auto navbar navbar-expand-xl navbar-dark bg-dark">
+    <div class="profile">
+      <label class="hoverable" for="fileInput">
+        <img [src]="url ? url : 'https://www.w3schools.com/howto/img_avatar.png'" />
+        <div class="hover-text"></div>
+        <div class="background"></div>
+      </label>
+
+      <input id="fileInput" type='file' (change)="onSelectFile($event)">
+    </div>
+    <p style="display: flex; justify-content: center; font-size:8pt">
+
+      <a onclick="btnclick()"><i class="fa fa-bars" id="menubar" aria-hidden="true"></i></a>
+
+
+  </div>
+
+  <ul class="show-dropdown main-navbar" >
+    <div class="selector-active"><div class="top"></div><div class="bottom"></div></div>
+
+    <li    class="active">
+
+      <a (click)="navigateToDashboard()" ><i id="iconmenu"  class="fa fa-user"  aria-hidden="true"></i>
+        <span class="linkname">&nbsp; پروفایل من</span></a>
+        
+    </li>
+
+    <li   >
+      <a (click)="navigateToRelation()"><i id="iconmenu"  class="fa fa-commenting-o" aria-hidden="true"></i> <span
+        class="linkname">&nbsp;ارتباط های من</span>
+         <app-sidbar-icon></app-sidbar-icon>
+        </a>
+
+      <!-- <span class="tooltip">ارتباط‌های من </span> -->
+    </li>
+
+    <li  >
+
+      <a  (click)="navigateToNobat()"><i id="iconmenu" class="fa fa-calendar" aria-hidden="true"></i> <span
+        class="linkname">&nbsp;نوبت‌های من</span></a>
+      <!-- <span class="tooltip">نوبت‌های من </span> -->
+    </li>
+
+    <li >
+      <a (click)="navigateToTaghvim()"><i id="iconmenu" class="fa fa-heart-o" aria-hidden="true"></i><span
+        class="linkname">&nbsp;تقویم سلامتی</span></a>
+      <!-- <span class="tooltip">تقویم سلامتی</span> -->
+    </li>
+
+    <li >
+      <a (click)="navigateToSalamatyaran()"><i id="iconmenu" class="fa fa-users" aria-hidden="true"></i> <span
+        class="linkname">&nbsp;سلامت یاران من</span></a>
+      <!-- <span class="tooltip">سلامت یاران من </span> -->
+    </li>
+
+    <li >
+      <a (click)="navigateToparvande()"><i id="iconmenu" class="fa fa-file-text-o" aria-hidden="true"></i> <span
+        class="linkname">&nbsp;پرونده پزشگی </span></a>
+      <!-- <span class="tooltip">پرونده پزشکی</span> -->
+    </li>
+  </ul>
+</div>
+</div>
+<div *ngIf="select===1">
+  <app-profile-userdashboard></app-profile-userdashboard>
+</div>
+
+<div *ngIf="select===2">
+  <app-communicatin-userdashboard></app-communicatin-userdashboard>
+</div>
+
+<div *ngIf="select===3">
+  <app-turnuserdashboard></app-turnuserdashboard>
+</div>
+<div *ngIf="select===4">
+  <app-calenderhealth></app-calenderhealth>
+</div>
+
+<div *ngIf="select===5">
+  <app-healpersuserdashboard></app-healpersuserdashboard>
+</div>
+
+<div *ngIf="select===6">
+  <app-medicalrecord-userdashboard></app-medicalrecord-userdashboard>
+
+</div>
+
+</div>
+
+<app-footer></app-footer>
+

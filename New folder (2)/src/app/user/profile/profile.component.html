@@ -1,0 +1,391 @@
+<section >
+
+  <div>
+      <div class="container" >
+         <div id="login-row" class="row justify-content-center align-items-center">
+           <div class="top col-md-11">
+                <div class="right">
+                  <img src="./assets/images/user-pages/userd/Path%20429.png" alt="">
+                  <div class="right-text">سلامت جو طلایی</div>
+                </div>
+             <div class="left">
+               <div class="left-text">
+                 <img src="./assets/images/user-pages/userd/Iconly-Light-Wallet.png" alt="">
+                 ۱۵۰۰۰ ریال
+               </div>
+                 <a class="increase-credit" >
+                   افزایش موجودی
+                 </a>
+             </div>
+           </div>
+              <div class="col-md-11 " style="height:70% !important ;" >
+
+
+            <form  [formGroup] = "EditForm" accept-charset="UTF-8" id="login-form" class="container"  (ngSubmit) = "registers()" style="border: 1px solid #0f0e0f; border-radius: 1rem;background: #fff;">
+
+
+      <div class="d-flex mt-4 ml-4" id="for-new-styles" style="width:100%; justify-content:space-between">
+            <div class="w-30 mt-3" style="margin-right: auto;">
+
+            <i  (click)="editactive()" type='button' class="fa fa-pencil-square-o " id="editInfo" aria-hidden="true" style="color:#9400D3;font-size:15pt !important; direction:ltr !important">
+              <div class="editInfoTooltip">ویرایش اطلاعات</div>
+            </i>
+
+
+          </div>
+        </div>
+
+
+
+
+
+           <div class ="row  mb-1" style="direction: rtl;">
+              <div class="col-6" style="direction: rtl;text-align:justify;font-size: 10pt;  width: 100%;">
+                 <div class="from-group inputsize">
+                 <label class=" mb-1 mr-1" style="font-size: 9pt"> <i  class="fa fa-info-circle" aria-hidden="true" style="color:#9400D3;font-size:12pt !important; direction:rtl !important;"></i> &nbsp; <b>اطلاعات فردی</b></label><br>
+
+                 </div>
+               </div>
+               </div>
+
+
+
+
+
+              <div class ="row mr-1 mb-1" style="direction: rtl;">
+
+                <div class="col-6" style="direction: rtl;text-align:justify;">
+                   <div class="from-group" >
+
+                   </div>
+                 </div>
+                 </div>
+              <div class="row" style="direction: rtl;">
+
+                <div class="col-6 forMobileDevices">
+
+                  <div class="from-group">
+                    <input
+                      type="text"
+                     [ngClass]="{ 'is-invalid': submitted && f.name.errors }"
+                      class="form-control mb-3 mt-2 text-right align-right inputsize  " style="font-size: 10pt;"
+                      placeholder='نام' formControlName = "name" value={{name}} required aria-required="true" title="Please fill out this field."
+                    />
+                  </div>
+                </div>
+                <div class="col-6 forMobileDevices">
+                  <div class="from-group">
+                    <input
+                      type="text"
+                      [ngClass]="{ 'is-invalid': submitted && f.surname.errors }" style="font-size: 10pt;"
+                      class="form-control mb-3 mt-2 text-right align-right inputsize"
+                      placeholder="نام خانوادگی" formControlName = "surname" value= {{surname}}
+                    />
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="row" style="direction: rtl;">
+                <div class="col-6 forMobileDevices">
+                  <div class="from-group">
+                    <input
+                        type="text"
+                        [ngClass]="{ 'is-invalid': submitted && f.father_name.errors }"
+                        class="form-control mb-3 text-right align-right inputsize" style="font-size: 10pt;"
+                        placeholder="نام پدر" formControlName = "father_name" value= {{father_name}}
+                      />
+                  </div>
+                </div>
+                <div class="col-6 forMobileDevices">
+                  <div class="from-group">
+                    <input type="text"
+                    [ngClass]="{ 'is-invalid': submitted && f.id_num.errors }"
+                      class="form-control mb-3 text-right align-right inputsize" style="font-size: 10pt;"
+                      placeholder="کد ملی" formControlName = "id_num" value= {{id_num}} mask="0000000000"
+                    />
+                  </div>
+                </div>
+              </div>
+
+
+            <div class="row" style="direction: rtl;">
+              <div class="col-6 forMobileDevices">
+                <div class="from-group">
+                  <input
+                    type="email"
+                    class="form-control mb-3 text-right align-right inputsize"
+                    [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+                    placeholder="ایمیل" formControlName = "email" style="direction: rtl;font-size: 10pt;" value= {{email}}
+                  />
+                </div>
+              </div>
+              <div class="col-6 forMobileDevices">
+                <div class="from-group">
+                  <input
+                    type="text"
+                    [ngClass]="{ 'is-invalid': submitted && f.phone_num.errors }"
+                    class="form-control mb-3 text-right align-right inputsize"
+                    placeholder='موبایل'  formControlName = "phone_num" style="direction: rtl;font-size: 10pt;" value= {{phone_num}}
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class ="row" style="direction: rtl;">
+              <div class="col-6 forMobileDevices">
+                <div div class="from-group">
+                  <select id="education" name="education" class="form-control mb-3 text-right align-right"
+                    [ngClass]="{ 'is-invalid': submitted && f.education.errors }"
+                     formControlName = "education"
+                     style="font-size:0.7rem;width: 150px;width: 100%;" (change)="selectEducation($event)" value= {{academic_degree}}>
+
+                      <option value="" disabled selected hidden> تحصیلات</option>
+                      <option value="دیپلم">دیپلم</option>
+                      <option value="کاردانی">کاردانی</option>
+                      <option value="کارشناسی">کارشناسی</option>
+                      <option value="کارشناسی ارشد">کارشناسی ارشد</option>
+                      <option value="دکتری">دکتری</option>
+                  </select>
+                </div>
+            </div>
+
+            <div class="col-6 forMobileDevices">
+              <div class="from-group ">
+                <select   style="font-size:0.7rem;width: 100%;margin-right:1px;"
+                  class="form-control mb-3 text-right align-right"
+                  formControlName = "nationality"
+                  [ngClass]="{ 'is-invalid': submitted && f.nationality.errors }"
+                  (change)="selectnationality($event)" value= {{nationality}} >
+
+                  <option value=""  disabled selected hidden >ملیت</option>
+                  <option value="ایرانی">ایرانی</option>
+                  <option value="غیرایرانی">غیر ایرانی</option>
+
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class ="row" style="direction: rtl;">
+            <div class="col-6 forMobileDevices">
+              <div class="from-group">
+                  <select id="marital_status" name="marital_status"   style="width: 150px;width: 100%;font-size:0.7rem"
+                   class="form-control mb-3 text-right align-right"  formControlName = "marital_status"
+                   [ngClass]="{ 'is-invalid': submitted && f.marital_status.errors }"
+                   (change)="select_marital_status($event)" value= {{name_marital}}>
+                    <option value="" disabled selected hidden> وضعیت تاهل</option>
+                    <option value="مجرد">مجرد</option>
+                    <option value="متاهل">متاهل</option>
+                  </select>
+              </div>
+            </div>
+            <div class="col-6 forMobileDevices">
+            <div class="from-group">
+              <select id="gender"  name="gender"
+                class="form-control mb-3 text-right align-right"
+                [ngClass]="{ 'is-invalid': submitted && f.gender.errors }"
+                formControlName = "gender"
+                  style="font-size:0.7rem;width: 100%;margin-right:1px" (change)="select_gender($event)" value= {{name_gender}} >
+
+                <option value="" disabled selected hidden>جنسیت</option>
+                <option value="زن">زن</option>
+                <option value="مرد">مرد </option>
+
+              </select>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class ="row" style="direction: rtl;">
+          <div class="col-6 forMobileDevices">
+            <div class="from-group">
+
+                    <select class="form-control mb-3 text-right align-right" name="ostan"
+                      [ngClass]="{ 'is-invalid': submitted && f.province.errors }"
+                      style="font-size:0.7rem;width: 100%;margin-right:1px;"
+                      formControlName = "province"
+                      id="province" (change)="selectOstan($event)" value={{province}} >
+
+                      <option value=""  disabled selected hidden >انتخاب استان</option>
+
+                      <option  *ngFor= "let item of data" value={{item.state_id}}>{{item.province}}</option>
+                    </select>
+              </div>
+            </div>
+            <div class="col-6 forMobileDevices">
+              <div class="from-group">
+                    <select  class="form-control mb-3 text-right align-right"  style="font-size:0.7rem; ;width: 150px;margin-right:32px"
+                      [ngClass]="{ 'is-invalid': submitted && f.city.errors }"
+                      formControlName = "city"
+                      style="font-size:9pt;width: 100%;margin-right:1px;font-size:0.7rem"
+                     name="City"   id="cities" (change)="selectCity($event)" >
+                      <option value="" disabled selected hidden>انتخاب شهر</option>
+                      <option value="" selected >انتخاب شهر</option>
+
+                      <option *ngFor="let city of cities" value={{city.id}}>{{city.city}}</option>
+                    </select>
+                  </div>
+               </div>
+            </div>
+
+
+            <div class="row" style="direction: rtl;">
+              <div class="col-6 forMobileDevices">
+                <div class="from-group">
+                  <input
+                    type="text"
+                    [ngClass]="{ 'is-invalid': submitted && f.passport_num.errors }"
+                    class="form-control mb-3 text-right align-right inputsize"
+                    placeholder='شماره پاسپورت' formControlName = "passport_num"  style="direction: rtl;font-size: 10pt;"
+                  />
+                </div>
+              </div>
+
+              <div class="col-6 forMobileDevices">
+                <div class="from-group">
+                    <textarea rows="20"
+                    cols="100" class="form-control mb-3 text-right align-right inputsize" rows="3" placeholder="آدرس"
+                     formControlName = "address"
+                    [ngClass]="{ 'is-invalid': submitted && f.address.errors }"
+                    >
+                    </textarea>
+                </div>
+              </div>
+
+            </div>
+
+            <div class ="row  mb-1" style="direction: rtl;">
+              <div class="col-6" style="direction: rtl;text-align:justify;font-size: 10pt; width: 100%">
+                 <div class="from-group inputsize" >
+                 <label class=" mb-1 mr-1" style="font-size: 9pt"> <i  class="fa fa-info-circle" aria-hidden="true" style="color:#9400D3; font-size:12pt !important; direction:rtl !important"></i> &nbsp; <b>اطلاعات بانکی</b></label><br>
+
+                 </div>
+               </div>
+               </div>
+             <div class ="row" style="direction: rtl;">
+              <div class="col-6 forMobileDevices">
+                <div class="from-group" >
+                  <input
+                    type="text"
+                    [ngClass]="{ 'is-invalid': submitted && f.bank_name.errors }"
+                    class="form-control mb-3 text-right align-right inputsize"
+                    placeholder=" نام بانک" formControlName = "bank_name" style="direction: rtl;font-size: 10pt;" value= {{bank_name}}
+                  />
+                </div>
+              </div>
+              <div class="col-6 forMobileDevices">
+                <div class="from-group">
+                    <input
+                      type="text"
+                      [ngClass]="{ 'is-invalid': submitted && f.account_num_bank.errors }"
+                      class="form-control mb-3 text-right align-right inputsize" mask="0000000000000"
+                      placeholder="  شماره حساب (۱۳ رقم)" formControlName = "account_num_bank" style="direction: ltr;font-size: 10pt;" value= {{account_num_bank}}
+                    />
+                  </div>
+              </div>
+          </div>
+
+       <div class ="row" style="direction: rtl;">
+         <div class="col-6 forMobileDevices">
+            <div class="from-group">
+              <input
+              type="text"
+              mask="0000-0000-0000-0000"
+              class="form-control mb-3 text-right align-right inputsize"
+              [ngClass]="{ 'is-invalid': submitted && f.card_num_bank.errors }"
+              placeholder=" شماره کارت (۱۶ رقم)" formControlName = "card_num_bank" style="direction: rtl;font-size: 10pt;" value= {{card_num_bank}}
+            />
+		        </div>
+          </div>
+        <div class="col-6 forMobileDevices">
+          <div class="from-group">
+            <input type="text"
+              class="form-control mb-3 text-right align-right inputsize"
+              [ngClass]="{ 'is-invalid': submitted && f.shabaInput.errors }" style="font-size: 10pt;"
+              mask="0000-0000-0000-0000-0000-0000"  placeholder="شماره شبا (۲۴ رقم)" formControlName = "shabaInput"
+            />
+	        </div>
+        </div>
+      </div>
+
+
+              <div class="d-flex mt-1 ml-4" id="for-new-styless" style="width:100%; justify-content:space-between">
+            <div class="w-20" style="margin-right: auto;">
+
+            <button   class="btn btn-primary mb-3 ml-1  w-20" id="btn-new-style" [hidden]=buttonactive style="width:100px;font-size: 10pt;background-color: #9400D3; padding: 5px 25px">
+              <a class="text-decoration-none text-white">
+                ثبت
+              </a>
+            </button>
+
+          </div>
+        </div>
+
+
+      </form>
+
+
+
+
+
+
+
+
+       <div class="form-group mt-1 mr-3 ml-3" style="text-align:justify; direction:rtl; border-radius: 6pt; font-size:10pt " >
+                <div class="col-12">
+               <div class="w-80 px-3"
+               *ngIf="((submitted) && f.name.errors) ||((submitted) && f.surname.errors)||((submitted) && f.father_name.errors)||
+               ((submitted) && f.id_num.errors)||((submitted) && f.email.errors)||((submitted) && f.phone_num.errors)
+               ||((submitted) && f.bank_name.errors)||((submitted) && f.account_num_bank.errors)||((submitted) && f.card_num_bank.errors)
+               ||((submitted) && f.shabaInput.errors)||((submitted) && f.address.errors)||((submitted) && f.city.errors)
+               ||((submitted) && f.education.errors)||((submitted) && f.passport_num.errors)||((submitted) && f.nationality.errors)
+               ||((submitted) && f.marital_status.errors)||((submitted) && f.gender.errors)||((submitted) && f.province.errors)  "
+
+
+
+               style="color:red; font-size:8pt">
+                    <div style="direction:rtl !important"><b><i class="fa fa-info-circle" aria-hidden="true"></i> لطفااطلاعات فرم را کامل نمایید.</b></div>
+              </div>
+              <div class="w-80 px-3"  *ngIf="submitted && f.id_num.errors  " style="color:red; font-size:8pt">
+                <div *ngIf="f.id_num.errors.pattern" style="direction:rtl !important"><b><i class="fa fa-info-circle" aria-hidden="true"></i>  فرمت کد ملی صحیح نمی باشد.</b></div>
+              </div>
+              <div class="w-80 px-3"  *ngIf="submitted && f.email.errors  " style="color:red; font-size:8pt">
+                <div *ngIf="f.email.errors.pattern" style="direction:rtl !important"><b><i class="fa fa-info-circle" aria-hidden="true"></i> فرمت ایمیل صحیح نمی باشد.</b></div>
+              </div>
+              <div class="w-80 px-3"  *ngIf="submitted && f.phone_num.errors  " style="color:red; font-size:8pt">
+                <div *ngIf="f.phone_num.errors.pattern" style="direction:rtl !important"><b><i class="fa fa-info-circle" aria-hidden="true"> </i>فرمت شماره همراه صحیح نمی باشد.</b></div>
+              </div>
+              <div class="w-80 px-3"  *ngIf="submitted && f.card_num_bank.errors  " style="color:red; font-size:8pt">
+                <div *ngIf="f.card_num_bank.errors.pattern" style="direction:rtl !important"><b><i class="fa fa-info-circle" aria-hidden="true"></i> فرمت شماره کارت صحیح نمی باشد.</b></div>
+              </div>
+              <div class="w-80 px-3"  *ngIf="submitted && f.shabaInput.errors  " style="color:red; font-size:8pt">
+                <div *ngIf="f.shabaInput.errors.pattern" style="direction:rtl !important"><b><i class="fa fa-info-circle" aria-hidden="true"></i> فرمت شماره شبا صحیح نمی باشد.</b></div>
+              </div>
+              <div class="w-80 px-3"  *ngIf="submitted && state_id==0  " style="color:red; font-size:8pt">
+                <div style="direction:rtl !important"><b><i class="fa fa-info-circle" aria-hidden="true"></i>  نام شهر را انتخاب کنید.</b></div>
+              </div>
+
+
+          </div>
+
+        </div>
+
+
+
+
+
+    </div>
+  </div>
+
+</div>
+  </div>
+
+</section>
+
+
+

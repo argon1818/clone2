@@ -1,0 +1,64 @@
+<header class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light container mx-auto">
+    <div class="container-fluid">
+      <div class="row col-12">
+        <div class="column1 flex col-7">
+          <a class="navbar-brand">
+            <img src="../../../assets/images/images/nobaan_logo.svg" alt="" width="70" height="60">
+          </a>
+          <button class="navbar-toggler" id="toggler" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation">
+            <span class="menu-logo"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav" id="activeToggle">
+              <a (click)="pagemain()" class="nav-link active alink" aria-current="page">
+                <img class="alink2" src="../../../assets/images/logos-svg/navbar-top-right/Iconly-Bold-Home.svg"
+                     id="getImage" onmouseover="changeImage()" alt="">
+                صفحه اصلی
+              </a>
+              <a class="nav-link">
+                <img src="../../../assets/images/logos-svg/navbar-top-right/Iconly-Light-Profile.svg" alt="">
+                دستیار همه کاره
+              </a>
+              <a class="nav-link">
+                <img src="../../../assets/images/logos-svg/navbar-top-right/Iconly-Light-Calling.svg" alt="">
+                مشاوره آنلاین
+              </a>
+              <a (click)="NavigateTosearchdoctor()" class="nav-link">
+                <img src="../../../assets/images/logos-svg/navbar-top-right/Iconly-Light-Time Circle.svg" alt="">
+                دریافت نوبت
+              </a>
+              <a class="nav-link">
+                <img src="../../../assets/images/logos-svg/navbar-top-right/Iconly-Light-Document.svg" alt="">
+                مجله پزشکی
+              </a>
+              <a class="nav-link">
+                <img src="../../../assets/images/logos-svg/navbar-top-right/Iconly-Light-Heart.svg" alt="">
+                پویش هم درد
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="column2 col-5 navLeft">
+          <div class="Consulting_GetTurn">
+               <span class="phoneNumber">
+                   <img src="../../../assets/images/logos-svg/navbar-top-left/021.png" alt="">
+                   <span class="text">
+                   پشتیبانی و دریافت نوبت
+               </span>
+               </span>
+          </div>
+          <div class="Register_Login">
+            <div (click)="Login()" class="Register">
+              <a>ورود</a>
+              <a>ثبت نام</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,340 @@
+//.ww{
+//  background: url("../../../assets/images/admin-panel/hamish-kale-0jgjwSt4A38-unsplash.jpg");
+//}
+.wholeStatistics{
+  background: rgba(255, 255, 255, 0.85);
+  margin: 0 210px 0 160px;
+  border-radius: 20px;
+  padding: 10px 0;
+}
+
+img {
+  width: 20%;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+}
+
+.whole {
+  display: flex;
+  max-width: 1520px;
+  margin-right: auto;
+  font-size: 12pt;
+
+  color: black;
+  margin-left: auto;
+}
+
+.whole .rightNavbar {
+  margin-right: 0px;
+}
+
+.whole .rightandleft {
+  text-align: right;
+  margin-top: 140px;
+  margin-right: -100px;
+}
+
+div > .whole .rightandleft .right {
+  display: flex;
+  justify-content: space-around;
+}
+
+.whole .rightandleft .right .first {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.whole .rightandleft .right .left {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.whole .rightandleft .right .left .second {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.whole .rightandleft .right .one,
+.whole .rightandleft .right .two,
+.whole .rightandleft .left .three,
+.whole .rightandleft .left .four {
+  width: 40%;
+  text-align: center;
+  // border: 1px solid #9516d8;
+  background: red;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  flex-direction: column;
+  display: flex;
+}
+
+
+.whole .rightandleft .right .one .top,
+.whole .rightandleft .right .two .top,
+.whole .rightandleft .left .three .top,
+.whole .rightandleft .left .four .top {
+  width: 100%;
+  // border-bottom: 1px solid #9516d8;
+  padding-bottom: 15px;
+}
+
+.whole .rightandleft .right .one .bottom,
+.whole .rightandleft .right .two .bottom,
+.whole .rightandleft .left .three .bottom,
+.whole .rightandleft .left .four .bottom {
+  width: 100%;
+  padding-top: 15px;
+}
+
+
+.whole .rightandleft .right .one .top::before {
+  content: '\f007';
+  font-family: "Font Awesome 5 Pro";
+  font-size: 18px;
+  color: #9516d8;
+  margin-left: 5px;
+}
+
+.whole .rightandleft .right .two .top::before {
+  content: '\f0f0';
+  font-family: "Font Awesome 5 Pro";
+  font-size: 18px;
+  color: #9516d8;
+  margin-left: 5px;
+}
+
+.whole .rightandleft .left .three .top::before {
+  content: '\f82d';
+  font-family: "Font Awesome 5 Pro";
+  font-size: 18px;
+  color: #9516d8;
+  margin-left: 5px;
+}
+
+.whole .rightandleft .left .four .top::before {
+  content: '\f7f2';
+  font-family: "Font Awesome 5 Pro";
+  font-size: 18px;
+  color: #9516d8;
+  margin-left: 5px;
+}
+
+//<<===================================Cards================================>>
+
+.bg-primary {
+  width: 100%;
+  text-align: center;
+  background-color: #934db7 !important;
+  margin: 0 10px;
+}
+
+.card-title {
+  font-family: inherit !important;
+}
+
+.card-header {
+  background-color: #783c97;
+}
+
+//<<===================================Charts===============================>>
+
+.statistics {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 50px 0;
+  padding-bottom: 50px;
+}
+
+.statistics .right {
+  display: flex;
+  width: 40%;
+  justify-content: end;
+}
+
+.divDoughnutChart,
+.divLineChart {
+  width: 100%;
+}
+
+#myChart {
+  width: 700px;
+  height: 350px;
+}
+
+.statistics .left {
+  display: flex;
+  width: 40%;
+  justify-content: end;
+  margin-left: 15px;
+}
+
+#TurnsStatistic {
+  width: 620px;
+  height: 350px;
+}
+
+.secStatistic{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 50px 0;
+  padding-bottom: 100px;
+}
+
+.secStatistic .right{
+  display: flex;
+  width: 40%;
+  justify-content: end;
+  margin-left: 20px;
+}
+
+.secStatistic .left{
+  display: flex;
+  width: 40%;
+  justify-content: end;
+  margin-right: 20px;
+}
+
+.secStatistic .right .divBarChart,
+.secStatistic .left .HorizontalBardivChart{
+  width: 100%;
+}
+
+
+//<<==============================================================================>>
+//<<=============================Media Queries==============================>>
+//<<==============================================================================>>
+
+@media only screen and (max-width: 1300px) {
+  .divLineChart {
+    width: 90%;
+  }
+  .statistics .left {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .statistics .left {
+    justify-content: start;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .divLineChart {
+    width: 80%;
+    margin-top: 30px;
+  }
+  .statistics .left {
+    justify-content: start;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  div > .whole .rightandleft .right {
+    flex-direction: column;
+  }
+
+  .statistics {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .whole .rightandleft {
+    margin-right: -60px;
+  }
+
+  #myChart {
+    height: 100% !important;
+    width: 120% !important;
+    margin-right: -30px;
+  }
+
+  .divLineChart {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+  }
+
+  .secStatistic{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #HorizontalBarChart1{
+    margin-top: 50px;
+  }
+
+}
+
+
+@media only screen and (max-width: 768px) {
+  .whole .rightandleft {
+    margin-right: -60px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .divDoughnutChart,
+  .divLineChart {
+    width: 100%;
+  }
+
+
+  #myChart {
+    height: 250px !important;
+    width: 500px !important;
+    margin-right: -140px;
+  }
+
+  #TurnsStatistic {
+    width: 380px !important;
+    height: 220px !important;
+    margin-right: -30px;
+  }
+
+}
+
+@media only screen and (max-width: 650px) {
+
+  .whole .rightandleft {
+    margin-right: -40px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  #TurnsStatistic {
+    width: 340px !important;
+    height: 220px !important;
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+
+  div > .whole .rightandleft .right .first,
+  div > .whole .rightandleft .right .left .second {
+    flex-direction: column;
+  }
+
+  .whole .rightandleft {
+    margin-right: -20px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .whole .rightNavbar {
+    margin-right: 0px;
+  }
+}
+
+

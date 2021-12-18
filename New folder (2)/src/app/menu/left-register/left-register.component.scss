@@ -1,0 +1,318 @@
+//<======================================choose item======================================>
+.choose-item{
+  width: 300px;
+  height: 62px;
+  background-color: #9516D8;
+  border-radius: 20px;
+  // margin: 70px 70px 0 0;
+}
+
+.choose-item > ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15px;
+  padding-left: 0px !important;
+
+}
+
+.choose-item > ul > li > a > img{
+  margin: 0 10px;
+  display: block;
+}
+
+.choose-item > ul > li:nth-child(5) > a > img::after{
+  content: '';
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+
+  border-radius: 50%;
+}
+
+.choose-item > ul > li .tooltip-register{
+  background-color: #fff;
+  visibility: hidden;
+  position: absolute;
+  margin-top: -65px;
+  margin-right: -12px;
+  box-shadow: 0px 0px 6px 0px #c5b9b9;
+  color: #9516D8;
+}
+
+.choose-item > ul > li:nth-child(5) .tooltip-register{
+  margin-right: -60px;
+}
+
+.choose-item > ul > li .tooltip-register:after{
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 0px;
+  border-color: #ffffff transparent transparent transparent;
+  position: absolute;
+  margin-top: 23px;
+  margin-right: -4px;
+}
+
+.choose-item > ul > li:hover .tooltip-register{
+  // width: max-content;
+  opacity: 1;
+  visibility: visible;
+  padding: 5px 6px;
+  border-radius: 12px;
+  border-bottom-left-radius: 0px;
+  transition: .2s;
+}
+
+
+//<======================================my doctors======================================>
+
+
+.mydoctors{
+  width: 300px;
+  background-color: #0066C6;
+  // margin-right: 70px;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+.mydoctors  .whole{
+  padding: 20px;
+  padding-bottom: 100px;
+}
+
+.mydoctors .whole .text{
+  color: #fff;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.mydoctors .whole .doctorImages{
+  display: flex;
+  align-items: center;
+}
+
+.mydoctors .whole .doctorImages li{
+  position: absolute;
+  margin-top: 110px;
+}
+
+.mydoctors .whole .doctorImages .one {
+  width: 50px;
+  margin-right: 10px;
+  z-index: 19;
+}
+
+.mydoctors .whole .doctorImages .one > a{
+  width: 20px;
+  height: 20px;
+  padding: 24px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.mydoctors .whole .doctorImages .one > a:hover{
+  background-color: #fbc9fb;
+  transition: .3s;
+}
+
+.mydoctors .whole .doctorImages .two {
+  margin-right: 43px;
+  z-index: 18;
+}
+
+.mydoctors .whole .doctorImages .three {
+  margin-right: 77px;
+  z-index: 17;
+}
+
+.mydoctors .whole .doctorImages .four {
+  margin-right: 112px;
+  z-index: 16;
+}
+
+.mydoctors .whole .doctorImages .five {
+  margin-right: 145px;
+  z-index: 15;
+}
+
+.mydoctors .whole .doctorImages .six {
+  margin-right: 172px;
+  z-index: 14;
+}
+
+.online:after{
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #00E13C;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 46px;
+  margin-right: -16px;
+  border: 2px solid #fff;
+}
+
+
+
+//<======================================insurance information======================================>
+
+
+.insuranceInformation{
+  width: 300px;
+  margin-top: 20px;
+  // margin-right: 70px;
+  padding: 15px 10px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px 0px #c5b9b9;
+  -webkit-box-shadow: 0px 4px 10px 0px #c5b9b9;
+  background-color: #fff !important;
+}
+
+.insuranceInformation .whole{
+  border: 1px solid #DDE0FF;
+  border-radius: 20px;
+  padding: 5px;
+  padding-bottom: 40px;
+}
+
+.insuranceInformation .whole .text{
+  margin: 10px 23px 10px 0;
+}
+
+.insuranceInformation .whole .text > img{
+  margin-left: 10px;
+}
+
+.insuranceInformation .whole .insuranceinfo{
+  display: flex;
+}
+
+.insuranceInformation .whole .insuranceinfo .right{
+  background-color: #DDE0FF;
+  border-radius: 12px;
+  margin-right: 18px;
+  padding: 20px 15px;
+  text-align: center;
+}
+
+.insuranceInformation .whole .insuranceinfo .right .line1,
+.insuranceInformation .whole .insuranceinfo .left .line1{
+  margin-bottom: 12px;
+}
+
+.insuranceInformation .whole .insuranceinfo .left{
+  background-color: #DDE0FF;
+  border-radius: 12px;
+  margin-right: 20px;
+  padding: 20px 15px;
+  text-align: center;
+}
+
+.insuranceInformation .whole .getturn{
+  display: flex;
+  padding: 10px 15px;
+  width: 230px;
+  background-color: #DDE0FF;
+  margin-right: 18px;
+  margin-top: 15px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.insuranceInformation .whole .getturn .text-right{
+  margin-left: 60px;
+  // margin-right: 12px;
+}
+
+.insuranceInformation .whole .getturn .text-left{
+  color: #9516D8;
+}
+
+.insuranceInformation .whole .getturnminus{
+  border-bottom: 1px solid #4B4279 !important;
+  padding-bottom: 5px;
+  margin-top: 15px;
+  margin-right: 43px;
+  font-size: 14px;
+}
+
+.insuranceInformation .whole .getturnminus > a{
+  color: #4B4279 !important;
+}
+
+.insuranceInformation .whole .getturnminus:hover > a{
+  color: #9516D8 !important;
+}
+
+.insuranceInformation .whole .getturnminus:hover{
+  border-bottom: 1px solid #8207c5 !important;
+}
+
+
+
+//=============================Media Queries=============================
+
+@media only screen and (max-width: 1130px) {
+
+  .choose-item,
+  .mydoctors,
+  .insuranceInformation{
+    width: 220px;
+  }
+
+  .choose-item > ul > li > a > img{
+    margin: 0 5px;
+  }
+
+  .mydoctors .whole .doctorImages .three{
+    display: none;
+  }
+
+  .mydoctors .whole .doctorImages .four{
+    margin-right: 72px;
+  }
+
+  .mydoctors .whole .doctorImages .five {
+    display: none;
+  }
+
+  .mydoctors .whole .doctorImages .six{
+    margin-right: 99px;
+  }
+
+  .insuranceInformation .whole .insuranceinfo .right {
+    margin-right: 2px;
+  }
+
+  .insuranceInformation .whole .getturn{
+    width: 186px;
+    margin-right: 2px;
+  }
+
+  .insuranceInformation .whole .getturn .text-right{
+    margin-left: 10px;
+  }
+
+  .insuranceInformation .whole .getturnminus {
+    margin-right: 8px;
+  }
+  .insuranceInformation .whole .text{
+    margin: 10px 33px 10px 0;
+  }
+
+  .mydoctors .whole .text {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  }
+
+
+
+
+
+
+

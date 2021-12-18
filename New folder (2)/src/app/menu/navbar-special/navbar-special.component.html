@@ -1,0 +1,385 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+<!--............................................... navbar ......................................................... -->
+<!-- <app-navbar-main></app-navbar-main> -->
+<!--............................................... ............. ......................................................... -->
+<header class="container-fluid">
+
+  <!--<div class="header">-->
+  <nav class="navbar navbar-expand-lg navbar-light container mx-auto">
+      <div class="container-fluid">
+          <div class="row col-12">
+              <div class="column1 flex col-7">
+                  <a class="navbar-brand" >
+                      <img src="../../../assets/images/images/nobaan_logo.svg" alt="" width="70" height="60">
+                  </a>
+                  <button class="navbar-toggler" type="button" id="toggler" data-bs-toggle="collapse"
+                          data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                          aria-expanded="false"
+                          aria-label="Toggle navigation">
+                      <span class="menu-logo"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                      <div class="navbar-nav" id="activeToggle">
+                          <a class="nav-link active alink" aria-current="page" >
+                              <img class="alink2" src="../../../assets/images/logos-svg/navbar-top-right/Iconly-Bold-Home-empty.png" onclick="changeImage()" alt="" >
+                              صفحه اصلی
+                          </a>
+                          <a class="nav-link">
+                              <img src="../../../assets/images/logos-svg/navbar-top-right/Iconly-Light-Profile.svg" alt="">
+                              دستیار همه کاره
+                          </a>
+                          <a class="nav-link" >
+                              <img src="../../../assets/images/logos-svg/navbar-top-right/Iconly-Light-Calling.svg" alt="">
+                              مشاوره آنلاین
+                          </a>
+                          <a (click)="Navigatemain()" class="nav-link" >
+                              <img src="../../../assets/images/logos-svg/navbar-top-right/Iconly-Light-Time Circle.svg" alt="">
+                              دریافت نوبت
+                          </a>
+                          <a class="nav-link" >
+                              <img src="../../../assets/images/logos-svg/navbar-top-right/Iconly-Light-Document.svg" alt="">
+                              مجله پزشکی
+                          </a>
+                          <a class="nav-link" >
+                              <img src="../../../assets/images/logos-svg/navbar-top-right/Iconly-Light-Heart.svg" alt="">
+                              پویش هم درد
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              <div class="column2 col-5 navLeft">
+                  <div class="Consulting_GetTurn">
+             <span class="phoneNumber">
+                 <img src="../../../assets/images/logos-svg/navbar-top-left/021.png" style="margin-top: -4px;" alt="">
+                 <span class="text">
+                 مشاوره و دریافت نوبت
+             </span>
+             </span>
+                  </div>
+                  <div class="Register_Login">
+                      <div class="Register">
+                          <a (click)="register()">ورود</a>
+                          <a (click)="register()">ثبت نام</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </nav>
+</header>
+<main>
+  <article class="container mx-auto">
+    <div class="middle">
+      <div class="asideOptions">
+          <ul>
+              <li>
+                  <img src="../../../assets/images/logos-svg/aside-options/Group 2645.svg" alt="">
+                  <div class="tooltip"><a>متن شماره1</a></div>
+              </li>
+              <li>
+                  <img src="../../../assets/images/logos-svg/aside-options/question.svg" alt="">
+                  <div class="tooltip"><a>متن شماره 2</a></div>
+              </li>
+              <li>
+                  <img src="../../../assets/images/logos-svg/aside-options/help (1).svg" alt="">
+                  <div class="tooltip"><a>متن شماره 3</a></div>
+              </li>
+              <li>
+                  <img src="../../../assets/images/logos-svg/aside-options/Group 2935.svg" alt="">
+                  <div class="tooltip"><a>پیشنهاد پزشک</a></div>
+              </li>
+          </ul>
+      </div>
+  </div>
+      <div class="middle">
+          <div class="mainPic">
+              <img src="" alt="">
+              <div class="container-fluid">
+                  <!--<div class="search">
+                      <input type="text" class="searchBox"
+                             placeholder="تخصص،بیماری،پزشک یا مرکز پزشکی خود را جستجو کنید">
+                      <button>جستجو</button>
+                      <div class="ir-select">
+                          <label for="">
+                              <span class="province">همه ایران</span>
+                              <select class="ir-province"></select>
+                          </label>
+                      </div>
+                  </div>-->
+                  <div class="navbar navbar-light bg-light">
+                      <div class="container-fluid">
+                          <div class="ir-select">
+                              <label for="">
+
+                                <select class="ir-province"  
+                                (change)="selectOstan($event)"  >
+                                
+                                <option value=""  disabled selected hidden >همه ایران</option>
+                                <option  *ngFor= "let item of data_city" value={{item.id}}>{{item.city}}</option> 
+                            </select>
+                              </label>
+                          </div>
+                          <form [formGroup] = "searchform" class="d-flex">
+                              <input class="form-control me-2" formControlName = "searchbutton"  name="searchbutton" type="search" placeholder="تخصص،بیماری،پزشک یا مرکز پزشکی خود را جستجو کنید" aria-label="Search">
+                              <button (click)="search()"  class="btn btn-outline-success"  type="button">جستجو</button>
+                          </form>
+                      </div>
+                  </div>
+                  <div class="anotherThings">
+                      <div class="getTurn">
+                          <input type="checkbox" class="inputBox" id="getTurn">
+                          <span></span>
+                      </div>
+                      <div class="getTurnText">
+                          <label for="getTurn">
+                              نوبت گیری با کمترین زمان انتظار
+                          </label>
+                      </div>
+                      <div class="showMyInsurance">
+                          <input type="checkbox" class="inputBox" id="showMyInsurance">
+                          <span></span>
+                      </div>
+                      <div class="showMyInsuranceText">
+                          <label for="showMyInsurance">
+                              نمایش طرف قرارداد بیمه خودم
+                          </label>
+                      </div>
+                      <div class="showAnotherTurns">
+                          <input type="checkbox" class="inputBox" id="showAnotherTurns">
+                          <span></span>
+                      </div>
+                      <div class="showAnotherTurnsText">
+                          <label for="showAnotherTurns">
+                              نمایش نوبت های این هفته
+                          </label>
+                      </div>
+                      <div class="morning_evening">
+                          <span class="evening">صبح</span>
+                          <input type="checkbox">
+                          <span class="morning">عصر</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="specialties ">
+          <ul class="specialtiesList">
+              <li class="surgery">
+                  <a >
+                      <img src="../../../assets/images/logos-svg/scalpel.svg" alt="">
+                  جراحی
+                  </a>
+              </li>
+              <li class="ear_throat_nose">
+                  <a >
+                  <img src="../../../assets/images/logos-svg/nose.svg" alt="">
+                  گوش و حلق و بینی
+                  </a>
+              </li>
+              <li class="orthopedics">
+                  <a >
+                      <img src="../../../assets/images/logos-svg/leg.svg" alt="">
+                  ارتوپدی
+                  </a>
+              </li>
+              <li class="eye">
+                  <a >
+                  <img src="../../../assets/images/logos-svg/eye.svg" alt="">
+                  چشم
+                  </a>
+              </li>
+              <li class="tooth">
+                  <a >
+                      <img src="../../../assets/images/logos-svg/tooth.svg" alt="">
+                  دندان
+                  </a>
+              </li>
+              <li class="allSpecialties">
+                  <a (click)="special()" >
+                  <img src="../../../assets/images/logos-svg/menu.svg" alt="">
+                             <select class="ir-province" style="border:white" 
+                                (change)="selectOstan($event)"  >
+                                
+                                <option value=""  disabled selected hidden >همه تخصص ها</option>
+                                <option  *ngFor= "let item of specialty" value={{item.id}}>{{item.name_special}}</option> 
+                            </select>
+                  </a>
+              </li>
+          </ul>
+      </div>
+      <div class="poster container" id="poster">
+        <a >
+          <img src="../../../assets/images/images/poster1.jpg" alt="دریافت مشاوره تلفنی">
+        </a>
+      </div>
+  </article>
+  <!--...........................................-->
+
+<div class="container1 mx-auto">
+    <div class="cartstyle" *ngFor="let item of specialty2" >
+        <img  [src]="'https://www.w3schools.com/howto/img_avatar.png'" class="img-responsive">
+        <!-- <div class="trapezoid "></div>
+        <div class='status-circle'><span style="position: absolute; display: block; padding-right: 18px; align-content: center; transform: translateY(-20%); font-weight: 700; color: #02e03c
+                    ">آنلاین </span>
+        </div> -->
+
+        <div class="itemsandresume">
+            <div class="items1">
+                <span  class="textfamily1 spansstyle"><i class="fa fa-user " aria-hidden="true" id="icon" ></i>{{item.doctors.user.name}} {{item.doctors.user.surname}}</span><br/>
+                <span class="textexpert spansstyle" *ngFor="let item2 of item.doctors.subspecialty"><i class="fa fa-check " aria-hidden="true" id="icon"
+                        style="color: rgba(149,22,217,255);"></i> {{item2.specialty.name_special}}</span><br />
+                        <span class="textname spansstyle"><i class="fa fa-briefcase " aria-hidden="true" id="icon"></i> نام مطب:{{item.office.name}} </span><br />
+                <span class="textname spansstyle"><i class="fa fa-briefcase " aria-hidden="true" id="icon"></i> مشاوره انلاین،
+                    مشاوره حضوری ، مشاوره غیر حضوری </span><br />
+                <span class="textname spansstyle"><i class="fa fa-star-o " aria-hidden="true" id="icon"></i> نظر</span><br />
+                <span class="textname spansstyle"><i class="fa fa-clock-o " aria-hidden="true" id="icon"></i>میانگین زمان
+                    پاسخگویی</span>
+            </div>
+            <div class="resume">
+                <div class="doctornumber">
+                    <p> شماره نظام پزشکی {{item.doctors.docid}}</p>
+
+                    <p>تجربه پزشکی  </p>
+                </div>
+                <a class="buttonresume" (click)="Navigatetobooking(item.secretary_doctor_office_id)" >دریافت نوبت<i class="fa fa-long-arrow-left" aria-hidden="true" style="margin-right: 5px;"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <!--.................................................-->
+
+</main>
+
+
+
+
+
+<footer>
+  <div class="container">
+    <div class="img">
+      <img class="imgg mx-auto" src="../../../../assets/images/footer/logo.jpg" alt="">
+    </div>
+      <div class="footer-top row">
+          <div class="first-div col-xl-4 col-lg-4 col-md-8 col-sm-12 col-12">
+
+              <div class="right-text">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. لورم
+                  ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+              </div>
+              <div class="address">
+                  <div class="address2">
+                      <span class="address-text blockSpan">
+                        <img src="../../../../assets/images/footer/Location.png" alt="">
+                        آدرس
+                      </span>
+                      <span>
+                      لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                  </span>
+                  </div>
+              </div>
+              <div class="email">
+                  <div class="email2">
+                      <span class="email-text blockSpan">
+                        <img src="../../../../assets/images/footer/Iconly-Light-Message.png" alt="">
+                        ایمیل
+                      </span>
+                      <span class="span2">info@nobaan.com</span>
+                      <span class="span1">info@nobaan.com</span>
+                  </div>
+              </div>
+              <div class="phoneNumber">
+                  <div class="phoneNumber2">
+                      <span class="phoneNumber-text blockSpan">
+                        <img src="../../../../assets/images/footer/Iconly-Light-Call.png" alt="">
+                        شماره تماس
+                      </span>
+                      <span>۰۹۱۳۲۲۲۳۳۳۲</span>
+                      <span class="span2">۰۹۱۳۲۲۲۳۳۳۲</span>
+                  </div>
+              </div>
+          </div>
+          <div class="second-div col-xl-2 col-lg-2 col-md-2 col-sm-6 col-6">
+              <ul>
+                  <li><a >فرصت های شغلی</a></li>
+                  <li><a >درباره ما</a></li>
+                  <li><a >تماس با ما</a></li>
+                  <li><a >فرصت های شغلی</a></li>
+                  <li><a >درباره ما</a></li>
+                  <li><a >تماس با ما</a></li>
+              </ul>
+          </div>
+          <div class="third-div col-xl-2 col-lg-2 col-md-2 col-sm-6 col-6">
+              <ul>
+                  <li><a >سوالات متداول</a></li>
+                  <li><a >دانش نامه و مجله پزشکی</a></li>
+                  <li><a >قوانین و مقررات</a></li>
+                  <li><a >سوالات متداول</a></li>
+                  <li><a >دانش نامه و مجله پزشکی</a></li>
+                  <li><a >قوانین و مقررات</a></li>
+              </ul>
+          </div>
+          <div class="fourth-div col-xl-4 col-lg-4 col-md-12 col-sm-12">
+              <iframe class="footer-map"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3215.4116160181675!2d59.58161843428675!3d36.30232398957578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f6c9124157c9e47%3A0xaf1d0a6e4a40a387!2z2YbZiNio2KfZhiAtINmH2YjYtNmG2K8g2LPYp9iy2KfZhiDYs9mE2KfZhdiqINm-2KfbjNiv2KfYsQ!5e0!3m2!1sen!2snl!4v1628885635380!5m2!1sen!2snl"
+                      width="350" height="170" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              <div class="newsletterMembership">
+                  <div class="text">عضویت در خبرنامه</div>
+                  <!-- <input type="text" placeholder="ایمیل خود را وارد کنید">
+                  <button></button> -->
+                  <form class="d-flex" id="footerform">
+                  <input class="form-control me-2" type="text" placeholder="ایمیل خود را وارد کنید" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit"></button>
+                </form>
+              </div>
+          </div>
+      </div>
+      <div class="row bottom-of-page">
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 one">
+              <span class="copyRight">
+                © 2020 NOBAAN All rights reserved.
+              </span>
+          </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 two">
+            <a  class="facebook">
+              <span></span>
+            </a>
+            <a class="instagram">
+              <span></span>
+            </a>
+            <a  class="telegram">
+              <span></span>
+            </a>
+            <a  class="whatsapp">
+              <span></span>
+            </a>
+          </div>
+      </div>
+  </div>
+</footer>
+
+
+<!-- <script>
+// var province = $('main .container .middle .mainPic .container-fluid > .navbar .ir-select > label .ir-province');
+// if(province.on('click',function() {
+//   province.addClass('active');
+// });
+
+$(document).ready(function () {
+    var province_select = $('main .container .middle .mainPic > .search  .ir-select > label .ir-province');
+    var province_placeHolder = $('main .container .middle .mainPic .container-fluid > .navbar .ir-select > label .province');
+    province_select.on('click',function () {
+        province_placeHolder.addClass('active');
+    })
+})
+
+</script> -->
+
+
+
+

@@ -1,0 +1,88 @@
+<app-sidbaradmin></app-sidbaradmin>
+<app-userd-navbar></app-userd-navbar>
+ <ngx-loading [show]="loading"  [config]="{fullScreenBackdrop:true, tertiaryColour: '#9516d8c2' , primaryColour: '#9516d8c2'}" ></ngx-loading>
+
+<section class="mt-5">
+    <div>
+        <div class="container" >
+            <div class="row justify-content-center align-items-center">
+                <div  class="col-md-5 " style="height:70% !important ; position: fixed; top:100px" >
+                <form [formGroup] = "AddAssignRoleForm"  id="login-form" (ngSubmit) = "AddAssignRole()"  class="form " action="" method="post" style="border: 1px solid #0f0e0f; border-radius: 1rem;">
+                            
+                    <h3 class="text-right text-info mt-3 mr-3" style="font-size:12pt; color:#9400D3 !important"><i class="fa fa-plus-circle mt-3" aria-hidden="true"></i><b>   ویرایش نقش های کاربر {{phone_num}}</b></h3>
+                    
+                    <div class="form-group mt-4 mr-3 ml-3" style="text-align:justify; direction:rtl; color:black; font-size:10pt ">
+           
+                    </div>
+                    <div class="form-group mt-4 mr-3 ml-3" style="text-align:justify; direction:rtl; color:black; font-size:10pt ">
+                    
+                        <label class=" mb-1 mr-2"> <i  class="fa fa-pencil-square-o" aria-hidden="true" style="color:#9400D3"></i>   نقش های کاربر را انتخاب کنید:</label><br>
+                    <div class="col-12">
+                <div class="form-group col-12 col-lg-12 px-0 mt-3">
+         
+
+                <select   class="form-control mb-3 text-right align-right"  style="font-size:0.7rem; ;width: 150px;margin-right:32px"
+                formControlName = "role" 
+                style="font-size:0.7rem;width: 100%;margin-right:1px"
+               name="role"   id="role_list"  >
+                <option *ngFor="let city of role_list" value={{city.id}}>{{city.role_name}}</option>
+              </select>
+
+
+                </div>        
+            </div>
+                <div class="row mb-3 mr-1 col-12" style="direction: rtl;">
+              </div>
+            </div>                                   
+
+            <div class="d-flex mt-4 ml-4" id="for-new-styles" style="width:100%; justify-content:space-between">
+            <div class="w-20" style="margin-right: auto;margin-left: 23px;">
+
+                    <button type="submit" class="btn btn-primary mb-3 mx-2" style="font-size: 10pt;width: 100px ; background-color: #9400D3; padding: 5px 25px">
+                <a class="text-decoration-none text-white">
+                تایید
+                 </a>
+            </button>
+                                <button  (click)="ReturnTo()" type="submit" class="btn btn-primary mb-3 mx-2 ml-2" style="width:100px;font-size: 10pt; width:100px;background-color: #9400D3; padding: 5px 25px">
+                        <a class="text-decoration-none text-white">
+                              بازگشت
+                        </a>                        
+                    </button>
+            </div>
+                        
+                             
+ 
+                      </div>                                
+                        </form>                        
+
+                        <div class="form-group mt-1 mr-3 ml-3" style="text-align:justify; border-radius: 6pt; direction:rtl; font-size:10pt " >                            
+                            <div class="col-12">                      
+                    
+                               <div class="w-80 px-3" *ngIf="submitted && errorMsg1==1" style="color:red; font-size:8pt"  >
+                                    <b><i class="fas fa-exclamation-circle"></i> حداقل یک مجوز انتخاب کنید.</b>
+                            
+                            </div>
+                            <div class="w-80 px-3" *ngIf="submitted && errorMsg2==1" style="color:red; font-size:8pt"  >
+                                <b><i class="fas fa-exclamation-circle"></i> حداقل یک کاربر انتخاب کنید.</b>
+                        
+                        </div>
+                        <div class="w-80 px-3" *ngIf="submitted && error1==1" style="color:red; font-size:8pt"  >
+                            <b><i class="fas fa-exclamation-circle"></i> به این کاربر قبلا نقش اختصاص داده شده است.</b>
+                    
+                    </div>
+                            </div>
+                        </div>     
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+    
+
+
+
+
+
+

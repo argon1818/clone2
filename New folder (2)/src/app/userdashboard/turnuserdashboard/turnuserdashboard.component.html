@@ -1,0 +1,97 @@
+<!-- <app-navbar></app-navbar> -->
+
+<section class="whole mx-auto">
+
+  <div class="sidebarIcon">
+   <!-- <app-sidbar-icon></app-sidbar-icon> -->
+  </div>
+
+
+  <div class="middle">
+    <form >
+        <div class="container">
+          <div id="login-row" class="row justify-content-center align-items-center">
+        <div class="top col-md-11">
+          <div class="right">
+            <img src="./assets/images/user-pages/userd/userdmycontacts/Path%20429.png" alt="">
+            <div class="right-text">سلامت جو نقره ای</div>
+          </div>
+          <div class="left">
+            <div class="left-text">
+              <img src="./assets/images/user-pages/userd/Iconly-Light-Wallet.png" alt="">
+              ۱۵۰۰۰ ریال
+            </div>
+            <a class="increase-credit">
+              افزایش موجودی
+            </a>
+          </div>
+        </div>
+          </div>
+
+      </div>
+      <div [hidden] = 'isFill'   class="fill">
+
+      <!---->
+      
+<section>
+
+  <div *ngFor="let item of bookinglist">
+    <div class="container2" >
+      <div id="login-row2" class="row justify-content-center align-items-center">
+        <div class="bottom col-md-11 mt-4">
+          <div class="whole2">
+            <div class="myConversations">
+              نوبت های من 
+            </div>
+            <div class="box2">
+              <div class="myTurnBox2">
+                <div class="firstLine2">
+                  <div class="right">
+                    نوبت ..
+                  </div>
+                  <div class="middle2">
+                    {{item.turn.date_turn}}
+                  </div>
+                  <div class="left">
+                    ۱۴:۵۵
+                  </div>
+                </div>
+                <div class="secondLine">
+                  <div class="right">
+                    <div class="img"></div>
+                    <div class="text-right">
+                      دکتر {{item.turn.office_doctor.doctors.user.name}} {{item.turn.office_doctor.doctors.user.surname}}  
+                    </div>
+                    <div class="text-middle" *ngFor="let item2 of item.turn.office_doctor.doctors.subspecialty">
+                    متخصص {{item2.specialty.name_special}}
+                    </div>
+                    <a class="end">
+                      بیشتر
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+            <!---->
+
+      </div>
+      <div [hidden]=" !isFill " class="empty">
+        <app-profile-myturns-empty></app-profile-myturns-empty>
+      </div>
+    </form>
+
+  </div>
+  <div class="left">
+    <app-left-register></app-left-register>
+  </div>
+
+</section>
+

@@ -1,0 +1,133 @@
+.whole{
+    display: flex;
+    max-width: 1200px;
+    margin-top: 110px;
+    padding: 25px;
+    border-radius: 20px;
+  
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #a4a3c3), color-stop(0.56, #dde0ff));
+    background: -webkit-linear-gradient(bottom, #a4a3c3 0%, #dde0ff 56%);
+    background: -moz-linear-gradient(bottom, #a4a3c3 0%, #dde0ff 56%);
+    background: -o-linear-gradient(bottom, #a4a3c3 0%, #dde0ff 56%);
+    background: -ms-linear-gradient(bottom, #a4a3c3 0%, #dde0ff 56%);
+    background: linear-gradient(to top, #a4a3c3 0%, #dde0ff 56%);
+  
+    //background: #fff;
+  }
+  
+  
+  //<===============================right==================================>
+  .sidebarIcon{
+    z-index: 50;
+  }
+  
+  .whole .right,
+  .whole .middle,
+  .whole .left{
+  
+  }
+  
+  
+  
+  .whole .right{
+  
+  }
+  
+  .whole .middle{
+  
+  }
+  
+  .register-left{
+    // margin: 120px;
+  }
+  
+  //<<==================================================================>>
+  //<<=========================Media Queries============================>>
+  //<<==================================================================>>
+  
+  @media only screen and (max-width: 14000px) {
+    .sidebarIcon{
+      margin-right: 50px;
+      position: absolute;
+    }
+  }
+  //
+  
+  
+  @media only screen and (max-width: 2560px) {
+    .sidebarIcon{
+      margin-right: 20px;
+    }
+  }
+  
+  @media only screen and (max-width: 1500px) {
+    .sidebarIcon{
+      margin-right: 50px;
+    }
+  }
+
+  @media only screen and (max-width: 1440px) {
+    .sidebarIcon{
+      margin-right: 80px;
+    }
+  }
+  //
+  //@media only screen and (max-width: 1455px) {
+  //  .sidebarIcon{
+  //    margin-right: 120px;
+  //  }
+  //}
+  //
+  //@media only screen and (max-width: 1400px) {
+  //  .sidebarIcon{
+  //    margin-right: 0;
+  //  }
+  //}
+  
+  @media only screen and (max-width: 1380px) {
+    .sidebarIcon{
+      display: none;
+    }
+  }
+  
+  @media only screen and (max-width: 1300px)  {
+    .whole{
+      margin: 110px 50px 0 50px !important;
+    }
+  }
+  
+  @media only screen and (max-width: 768px)  {
+    .whole .left{
+      display: none;
+    }
+  
+    .whole .middle{
+      margin-right: 10px;
+    }
+  
+    .whole {
+      margin: 110px 30px 0 30px !important;
+    }
+  }
+  
+  @media only screen and (max-width: 468px) {
+  
+    .whole{
+      margin: 110px 10px 0 10px !important;
+    }
+  
+  }
+  
+  @media only screen and (max-width: 400px) {
+  
+    .whole {
+      margin: 110px 5px 0 5px !important;
+      padding: 10px;
+    }
+  
+    input{
+      padding: 5px;
+    }
+  
+  }
+  

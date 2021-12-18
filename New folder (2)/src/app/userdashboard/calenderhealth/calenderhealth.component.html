@@ -1,0 +1,46 @@
+<!-- <app-navbar></app-navbar> -->
+
+<section class="whole mx-auto">
+
+  <div class="sidebarIcon">
+   <!-- <app-sidbar-icon></app-sidbar-icon> -->
+  </div>
+
+
+  <div class="middle">
+    <form >
+      <div class="container">
+        <div id="login-row" class="row justify-content-center align-items-center">
+          <div class="top col-md-11">
+            <div class="right">
+              <img src="./assets/images/user-pages/userd/userdmycontacts/Path%20429.png" alt="">
+              <div class="right-text">سلامت جو نقره ای</div>
+            </div>
+            <div class="left">
+              <div class="left-text">
+                <img src="./assets/images/user-pages/userd/Iconly-Light-Wallet.png" alt="">
+                ۱۵۰۰۰ ریال
+              </div>
+              <a class="increase-credit">
+                افزایش موجودی
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div [hidden] = 'isFill' *ngFor="let i of Count" class="fill">
+        <!--<app-profile-myturns></app-profile-myturns>-->
+      </div>
+      <div [hidden]=" !isFill " class="empty">
+        <app-profile-healthcalender></app-profile-healthcalender>
+      </div>
+    </form>
+
+  </div>
+  <div class="left">
+    <app-left-register></app-left-register>
+  </div>
+
+</section>
+

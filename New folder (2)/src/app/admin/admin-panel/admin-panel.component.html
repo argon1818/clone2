@@ -1,0 +1,109 @@
+<app-adminp-navbar></app-adminp-navbar>
+<div class="ww">
+  <section class="col-12 whole">
+    <div class="col-2  rightNavbar">
+      <app-sidbaradmin></app-sidbaradmin>
+    </div>
+
+    <div class="col-10 rightandleft ">
+      <div class="right">
+        <div class="first">
+          <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header">پزشکان</div>
+            <div class="card-body">
+              <h5 class="card-title">تعداد کل</h5>
+              <span>
+                {{num_doctor}}
+              </span>
+              <h5 class="card-title">ثبت نام شده در این هفته</h5>
+              <span>
+                {{num_doctor}}
+              </span>
+<!--              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's-->
+<!--                content.</p>-->
+            </div>
+          </div>
+          <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header">کاربران</div>
+            <div class="card-body">
+              <h5 class="card-title">تعداد کل</h5>
+              <span>
+                {{num_user}}
+              </span>
+              <h5 class="card-title">ثبت نام شده در این هفته</h5>
+              <span>
+                {{num_user}}
+              </span>
+              <!--              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's-->
+              <!--                content.</p>-->
+            </div>
+          </div>
+        </div>
+        <div class="left">
+          <div class="second">
+            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+              <div class="card-header">مطب ها</div>
+              <div class="card-body">
+                <h5 class="card-title">تعداد کل</h5>
+                <span>
+                {{num_office}}
+              </span>
+                <h5 class="card-title">ثبت نام شده در این هفته</h5>
+                <span>
+                {{num_office}}
+              </span>
+                <!--              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's-->
+                <!--                content.</p>-->
+              </div>
+            </div>
+            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+              <div class="card-header">منشی ها</div>
+              <div class="card-body">
+                <h5 class="card-title">تعداد کل</h5>
+                <span>
+                {{num_secretary}}
+              </span>
+                <h5 class="card-title">ثبت نام شده در این هفته</h5>
+                <span>
+                {{num_secretary}}
+              </span>
+                <!--              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's-->
+                <!--                content.</p>-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="wholeStatistics">
+    <div class="statistics">
+      <div class="right">
+        <div class="divDoughnutChart">
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
+      <div class="left">
+        <div class="divLineChart">
+          <canvas id="TurnsStatistic"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="secStatistic">
+      <div class="right">
+        <div class="divBarChart">
+          <canvas id="BarChart1"></canvas>
+        </div>
+      </div>
+      <div class="left">
+        <div class="HorizontalBardivChart">
+          <canvas id="HorizontalBarChart1"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

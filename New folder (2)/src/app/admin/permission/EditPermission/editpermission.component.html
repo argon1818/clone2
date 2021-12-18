@@ -1,0 +1,79 @@
+<app-userd-navbar></app-userd-navbar>
+<app-sidbaradmin></app-sidbaradmin>
+ <ngx-loading [show]="loading"  [config]="{fullScreenBackdrop:true, tertiaryColour: '#9516d8c2' , primaryColour: '#9516d8c2'}" ></ngx-loading>
+
+
+<section id="login"class="mt-5 register">
+    <div id="login">
+        <div class="container" >
+            <div  class="row justify-content-center align-items-center ">
+                <div class="col-md-5 " style="height:70% !important ; position: fixed; top:100px" >
+                <form [formGroup] = "EditpermissionForm" (ngSubmit) = "editFunc()" id="login-form" class="form mr-4 " action="" method="post" style="border: 1px solid #0f0e0f; border-radius: 1rem;">
+                            
+                    <h3 class="text-right text-info mt-3 mr-3" style="font-size:13pt; color:#9400D3 !important"><i class="fa fa-plus-circle" aria-hidden="true" style="margin-right: 10px;margin-top: 16px;"></i>&nbsp;<b> ویرایش مجوز</b></h3>
+                        <div class="form-group mt-4 mr-3 ml-3" style="text-align:justify; direction:rtl; color:black; font-size:10pt ">
+                        
+                            <label class=" mb-1 mr-2" > <i  class="fa fa-pencil-square-o" aria-hidden="true" style="color:#9400D3"></i> نام مجوز را وارد کنید:</label>
+                                <div class="col-12"> 
+                                    <input  type="text" style="font-size:10pt" name="permission_name" id="permission_name" class="form-control mt-3 " 
+                                    [ngClass]="{ 'is-invalid': submitted && f.permission_name2.errors }"
+                                    formControlName = "permission_name2" value={{editItem.permission_name}}>
+                                </div>
+                    </div>
+
+                    <div class="form-group mt-4 mr-3 ml-3" style="text-align:justify; direction:rtl; color:black; font-size:10pt " >
+                            
+                        <label class=" mb-3 mr-2 ml-4" > <i class="fa fa-comment" aria-hidden="true" style="color:#9400D3"></i> مجوز  چه امکاناتی را برای کاربر فراهم می کند؟</label>
+                            <div class="col-12"> 
+                                <textarea name="description" style="font-size:10pt" rows="20" cols="10" class="form-control mt-2"   
+                                        [ngClass]="{ 'is-invalid': submitted && f.description2.errors }"
+                                        rows="3" placeholder="امکانات مجوز"  formControlName = "description2" value={{editItem.description}}> 
+                                </textarea>
+                            </div>
+                        </div>           
+                            <div class="d-flex mt-4 ml-4" id="for-new-styles" style="width:100%; justify-content:space-between">
+                                <div class="w-20" style="margin-right: auto;margin-left: 23px;">
+                                  
+
+                                    <button type="submit" class="btn btn-primary mb-3 mx-2 btn2" style="background-color: #9516d8; padding: 5px 25px;font-size: 10pt; width:100px;  border: 1px solid #9400D3!important;">
+                                        <a class="text-decoration-none text-white">
+                                            تایید
+                                        </a>
+                                    </button>   
+                                      <button  (click)="ReturnTo()" type="submit" class="btn btn-primary mb-3 mx-2 btn1" style="width:100px;background-color: #9516d8;font-size: 10pt; padding: 5px 25px;  border: 1px solid #9400D3!important;">
+                                        <a class="text-decoration-none text-white">
+                                        بازگشت
+                                        </a>                        
+                                    </button>                   
+                                 </div>
+                                       
+                </div>           
+            </form>  
+            <div class="form-group mt-1 mr-3 ml-3" style="text-align:justify; direction:rtl; border-radius: 6pt; font-size:10pt " >                            
+                <div class="col-12"> 
+                     <div class="w-80 px-3"  *ngIf="((submitted) && f.permission_name2.errors)   " style="color:red; font-size:8pt">
+                          <div *ngIf="f.permission_name2.errors.required" style="direction:rtl !important"><b><i class="fas fa-exclamation-circle"></i> لطفا نام مجوز  را وارد نمایید.</b></div> 
+ 
+                    </div>
+                <div class="w-80 px-3"  *ngIf="((submitted) && f.description2.errors)   " style=" color:red;font-size:8pt">
+                <div *ngIf="f.description2.errors.required" style="direction:rtl !important"><b><i class="fas fa-exclamation-circle"></i> لطفا امکانات مجوز  را وارد نمایید.</b></div>                  
+            </div>  
+            <div class="w-80 px-3" *ngIf="submitted && error2==1" style="color:red; font-size:8pt"  >
+                <b><i class="fas fa-exclamation-circle"></i>   داده های ورودی نامعتبر است.</b>              
+            </div>     
+            <div class="w-80 px-3" *ngIf="submitted && error1==1" style="color:red; font-size:8pt"  >
+                     <b><i class="fas fa-exclamation-circle"></i> این نام قبلا انتخاب شده است.</b>
+              
+            </div>
+        </div>
+    </div>                              
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+

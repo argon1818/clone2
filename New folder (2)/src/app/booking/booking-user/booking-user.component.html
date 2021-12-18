@@ -1,0 +1,83 @@
+
+<app-userd-navbar></app-userd-navbar>
+<app-sidbaradmin></app-sidbaradmin>
+ <ngx-loading [show]="loading"  [config]="{fullScreenBackdrop:true, tertiaryColour: '#9516d8c2' , primaryColour: '#9516d8c2'}" ></ngx-loading>
+
+<div>
+  <div class="row justify-content-center align-items-center">
+      <div  class="col-md-9" style="height:70% !important; top:100px " >
+      <div   id="login-form" class="form "  style="border: 1px solid #0f0e0f; border-radius: 1rem; ">          
+        <h3  class="text-right text-info mt-3 mr-3" (click)="Navigatemanageaddbooking()" style="font-size:13pt; color:#9400D3 !important"><a   style="text-decoration:none; font-size:12pt; color:#9400D3 !important"> <i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp;<b> ثبت نوبت  برای کاربر </b></a></h3>
+          <div class="container mt-4"  >     
+              <input type="text" style="direction:rtl;font-size: 10pt;" class="form-control    mb-4" placeholder="جستجو" [(ngModel)]='filterTerm'> 
+              <div class="table-responsive">
+ 
+                 <table class="table" datatable [dtOptions]="dtOptions" style="direction:rtl; text-align:center;font-size: 10pt !important;">
+                    <thead>
+                      <tr >
+                        <th>ردیف </th>
+                        <th>نام کاربر </th>
+                         <th>شماره تماس کاربر  </th>
+                        <th>نام پزشک</th>
+                        <th>نام مطب</th>
+                        <th> تاریخ نوبت</th>
+                        <th>حذف نوبت</th>
+
+                      </tr>
+                    </thead>
+                    <tbody>
+    
+                    <tr *ngFor="let item of booking| filter:filterTerm| paginate: configTable; let i=index;">
+                     <td>
+                      {{i+1 }}              
+                     </td>                  
+                      <td>
+                      {{item.user.name}}  {{item.user.surname}}
+                      </td>
+                      <td>
+                      {{item.user.phone_num}}
+                      </td>
+                      <td>
+                      {{item.turn.office_doctor.doctors.user.name}}  {{item.turn.office_doctor.doctors.user.surname}}
+                      </td>
+                            <td>
+                      {{item.turn.office_doctor.office.name}}  
+                      </td>
+                               <td>
+                      {{item.turn.date_turn}}  
+                      </td>
+                          
+               
+                      <td> 
+                        <a  (click)="Deleteturn(item.user_id,item.turn_id)" style="text-decoration:none; font-size:13pt; color:#9400D3 !important"> <i class="fa fa fa-trash" aria-hidden="true"></i> </a>
+
+                      </td>   
+                           
+             
+
+                    </tr> 
+                    <td colspan="4">    
+                </tbody>
+              </table>
+            </div>  
+          </div>                                   
+        </div>                      
+    </div>
+</div> 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

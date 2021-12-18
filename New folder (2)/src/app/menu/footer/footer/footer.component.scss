@@ -1,0 +1,369 @@
+footer {
+    /* Code for the gradient */
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #BE89EE), color-stop(1, #DDDCFE));
+    background: -webkit-linear-gradient(bottom, #BE89EE 0%, #DDDCFE 100%);
+    background: -moz-linear-gradient(bottom, #BE89EE 0%, #DDDCFE 100%);
+    background: -o-linear-gradient(bottom, #BE89EE 0%, #DDDCFE 100%);
+    background: -ms-linear-gradient(bottom, #BE89EE 0%, #DDDCFE 100%);
+    background: linear-gradient(to top, #BE89EE 0%, #DDDCFE 100%);
+    // padding: 100px 15px 0px 15px;
+    margin-top: 50px;
+    overflow-x: hidden;
+}
+
+footer .container {
+    line-height: 26px;
+    padding: 0 20px 0 27px;
+}
+
+
+footer .container > .img {
+    width: 230px;
+    // margin-top: -28px;
+    margin-top: -130px;
+    position: absolute;
+    background-color: #fff;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+
+footer .container .row .first-div .right-text, footer .container .row .first-div .address,
+footer .container .row .first-div .email, footer .container .row .first-div .phoneNumber {
+    font-size: 12px;
+    color: #3c3f41;
+    margin-bottom: 25px;
+    text-align: right;
+}
+
+footer .container .row .first-div .email, footer .container .row .first-div .address .address2 {
+    display: flex;
+    align-items: center;
+}
+
+footer .container .row .first-div .email, footer .container .row .first-div .address .address2 .blockSpan {
+    display: block;
+}
+
+
+footer .container .row .first-div .email, footer .container .row .first-div .email .email2 {
+    display: flex;
+    align-items: center;
+}
+
+// footer .container .row .first-div .email, footer .container .row .first-div .email .email2 .blockSpan {
+//     display: block;
+//     margin-right: -30px;
+// }
+
+
+footer .container .row .first-div .email, footer .container .row .first-div .phoneNumber .phoneNumber2 {
+    display: flex;
+    align-items: center;
+}
+
+footer .container .row .first-div .email, footer .container .row .first-div .phoneNumber .phoneNumber2 .blockSpan {
+    display: block;
+}
+
+footer .container .row .first-div .address .address2 .address-text,
+footer .container .row .first-div .email .email2 .email-text,
+footer .container .row .first-div .phoneNumber .phoneNumber2 .phoneNumber-text {
+    // margin-left: 20px;
+    margin-right: 3px;
+    width: 100px;
+}
+
+footer .container .row .first-div .address .address2 .address-text{
+    margin-right: 7px;
+    margin-left: 33px;
+}
+
+footer .container .row .first-div .address .address2 .address-text > img{
+    margin-left: 11px;
+}
+
+footer .container .row .first-div .phoneNumber .phoneNumber2 .phoneNumber-text > img{
+    margin-left: 5px;
+}
+
+footer .container .row .first-div .email .email2 .email-text > img{
+    margin-left: 8px;
+}
+
+footer .container .row .first-div .email .email2 .span1{
+    margin-right: 15px;
+}
+
+
+footer .container .row .first-div .phoneNumber .phoneNumber2 .span2{
+    margin-right: 12px;
+}
+
+footer .container .row .second-div {
+    font-size: 12px;
+    color: #3c3f41;
+    line-height: 26px;
+    text-align: right;
+}
+
+footer .container .row .second-div > ul > li > a:hover {
+    color: #9600F0;
+    font-weight: bold;
+}
+
+footer .container .row .third-div {
+    font-size: 12px;
+    color: #3c3f41;
+    line-height: 26px;
+    text-align: right;
+}
+
+footer .container .row .third-div > ul > li > a:hover {
+    color: #9600F0;
+    font-weight: bold;
+}
+
+footer .container .row .fourth-div .footer-map {
+    border-radius: 18px;
+}
+
+footer .container .row .fourth-div .newsletterMembership .text {
+    font-size: .9rem;
+    margin: 12px 0;
+    //&&
+    text-align: center;
+}
+
+//&&
+footer .container .row .fourth-div .newsletterMembership .d-flex{
+    justify-content: flex-end;
+}
+
+footer .container .row .fourth-div .newsletterMembership > .d-flex >input {
+    padding: 10px 15px;
+    border-radius: 10px;
+    // width: 70%;
+    margin-right: 0px !important;
+
+    width: 350px;
+    font-size: .9rem;
+}
+
+footer .container .row .fourth-div .newsletterMembership > .d-flex >input:focus{
+    border: none;
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem rgb(136 102 162);
+}
+
+footer .container .row .fourth-div .newsletterMembership > .d-flex > button{
+    margin-right: -60px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: url("../../../../assets/images/footer/Group\ 3335.png") no-repeat;
+    background-position: center;
+    width: 60px;
+    background-color: #fff;
+    border-color: #fff;
+    height: 40px;
+    margin-top: 1px;
+
+    //&&
+    background-position-y: 5px;
+    height: 30px;
+}
+
+footer .container .row .fourth-div .newsletterMembership > .d-flex > button:focus{
+    box-shadow: none;
+}
+
+
+footer .container .row .fourth-div .newsletterMembership > i {
+    background: white;
+    padding:  12px 12px 13px 15px;
+    border-radius: 12px;
+    color: rgb(148, 23, 217, .7);
+    cursor: pointer;
+    transform: translateX(23px);
+}
+
+footer .container .row .fourth-div .newsletterMembership > i:hover {
+    color: rgb(148, 23, 217);
+}
+
+footer .container .footer-top {
+    // border-bottom: 1px solid #615f5f;
+    // margin-bottom: 5px;
+    // padding-bottom: 10px;
+    border-bottom: 1px solid #615f5f;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+    margin-top: 102px;
+}
+
+footer .container .bottom-of-page {
+    margin-top: 18px;
+    padding-bottom: 10px;
+}
+
+
+footer .container .bottom-of-page .copyRight {
+    unicode-bidi: plaintext;
+    text-align: end;
+    padding-left: 12px;
+    margin-top: 8px;
+    color: #4b4972;
+    font-size: 14px;
+
+    //&&
+    position: absolute;
+    right: 10px;
+}
+
+footer .container .bottom-of-page .two{
+    text-align: end;
+}
+
+footer .container .bottom-of-page .two > a{
+    margin: 0 10px;
+}
+
+footer .container .bottom-of-page .two .whatsapp > span::before {
+    content: '\f232';
+    font-family: "Font Awesome 5 Pro";
+    color: #6f6969;
+    font-size: 20px;
+}
+
+footer .container .bottom-of-page .two .telegram > span::before {
+    content: '\f2c6';
+    font-family: "Font Awesome 5 Pro";
+    color: #6f6969;
+    font-size: 20px;
+}
+
+footer .container .bottom-of-page .two .instagram > span::before {
+    content: '\f16d';
+    font-family: "Font Awesome 5 Pro";
+    color: #6f6969;
+    font-size: 20px;
+}
+
+footer .container .bottom-of-page .two .facebook > span::before {
+    content: '\f082';
+    font-family: "Font Awesome 5 Pro";
+    color: #6f6969;
+    font-size: 20px;
+}
+
+footer .container .bottom-of-page .two .whatsapp:hover > span::before{
+    color: #25d366;
+    transition:.4s ;
+}
+
+footer .container .bottom-of-page .two .telegram:hover > span::before{
+    color: #0088cc;
+    transition:.4s ;
+}
+
+footer .container .bottom-of-page .two .instagram:hover > span::before{
+    color: #c32aa3;
+    transition:.4s ;
+}
+
+footer .container .bottom-of-page .two .facebook:hover > span::before{
+    color: #3b5998;
+    transition:.4s ;
+}
+
+@media only screen and (max-width: 1120px){
+    .footer-map{
+        width: 280px;
+        height: 150px;
+    }
+
+    footer .container .row .fourth-div .newsletterMembership > .d-flex >input {
+        width: 240px;
+    }
+}
+
+@media only screen and (max-width: 992px){
+    footer .container .row .fourth-div {
+        margin-top: 20px;
+    }
+
+    .footer-map{
+        width: 80%;
+        height: 150px;
+        margin: 0 65px;
+    }
+
+    footer .container .row .fourth-div .newsletterMembership > .d-flex >input {
+        width: 80%;
+        margin: 0 65px!important;
+    }
+
+    footer .container .row .fourth-div .newsletterMembership > .d-flex > button{
+        margin-right: -130px;
+    }
+
+    footer .container .row .fourth-div .newsletterMembership .text {
+        // margin: 12px 70px;
+        text-align: center;
+    }
+
+    footer .container .row .fourth-div .newsletterMembership .d-flex{
+        //&&
+        justify-content: end;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .footer-map{
+        width: 80%;
+        height: 150px;
+        margin: 0 65px;
+    }
+
+    footer .container .row .second-div {
+        text-align: right;
+    }
+
+    footer .container .row .third-div {
+        text-align: right;
+    }
+
+}
+
+@media only screen and (max-width: 576px){
+    .footer-map{
+        width: 100%;
+        margin: 0px;
+    }
+
+    footer .container .row .fourth-div .newsletterMembership > .d-flex >input {
+        width: 100%;
+        margin: 0px !important;
+    }
+
+    footer .container .row .fourth-div .newsletterMembership > .d-flex > button{
+        margin-right: -60px;
+    }
+
+    footer .container .bottom-of-page .one,
+    footer .container .bottom-of-page .two{
+        text-align: center;
+    }
+
+    footer .container .bottom-of-page .two{
+        margin-top: 12px;
+    }
+
+    //&&
+    footer .container .bottom-of-page .copyRight{
+        position: relative;
+    }
+}
+
+
+

@@ -1,0 +1,111 @@
+<app-navbar-main></app-navbar-main>
+<div class="main">
+  <div class="Carousel">
+    <ngb-carousel class="crsl">
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper test">
+          <img src="../../../assets/images/images/one.jpg" alt="Random first slide">
+        </div>
+        <div class="carousel-caption">
+<!--          <h3>لیبل اسلاید اول</h3>-->
+<!--          <p>تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.</p>-->
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper test">
+          <div id="img"></div>
+<!--          <img src="../../../assets/images/images/mainpic11.jpg" id="mainpic" alt="Random second slide">-->
+        </div>
+        <div class="carousel-caption">
+<!--          <h3>لیبل اسلاید دوم</h3>-->
+<!--          <p>کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد.</p>-->
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper test">
+          <img src="../../../assets/images/images/three.jpg" alt="Random third slide">
+        </div>
+        <div class="carousel-caption">
+<!--          <h3>لیبل اسلاید سوم</h3>-->
+<!--          <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>-->
+        </div>
+      </ng-template>
+    </ngb-carousel>
+    <div class="search">
+      <div class="searchbar">
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="تخصص،بیماری،پزشک یا مرکز پزشکی خود را جستجو کنید" aria-label="Search">
+          <button class="btn btn-outline-success"  type="button">جستجو</button>
+        </form>
+      </div>
+      <div class="county">
+        <mat-form-field style="width: 50%" appearance="fill">
+          <mat-label>استان خود را انتخاب کنید</mat-label>
+          <mat-select [(value)]="selected1">
+            <mat-option>----</mat-option>
+            <mat-option value="option1">خراسان رضوی</mat-option>
+            <mat-option value="option2">خراسان شمالی</mat-option>
+            <mat-option value="option3">خراسان جنوبی</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field style="width: 50%" appearance="fill">
+          <mat-label>شهر خود را انتخاب کنید</mat-label>
+          <mat-select [(value)]="selected2">
+            <mat-option>----</mat-option>
+            <mat-option value="option1">مشهد</mat-option>
+            <mat-option value="option2">بجنورد</mat-option>
+            <mat-option value="option3">بیرجند</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="specialties ">
+      <ul class="specialtiesList">
+        <li class="surgery">
+          <a >
+            <img src="../../../assets/images/logos-svg/scalpel.svg" alt="">
+            جراحی
+          </a>
+        </li>
+        <li class="ear_throat_nose">
+          <a >
+            <img src="../../../assets/images/logos-svg/nose.svg" alt="">
+            گوش و حلق و بینی
+          </a>
+        </li>
+        <li class="orthopedics">
+          <a >
+            <img src="../../../assets/images/logos-svg/leg.svg" alt="">
+            ارتوپدی
+          </a>
+        </li>
+        <li class="eye">
+          <a >
+            <img src="../../../assets/images/logos-svg/eye.svg" alt="">
+            چشم
+          </a>
+        </li>
+        <li class="tooth">
+          <a >
+            <img src="../../../assets/images/logos-svg/tooth.svg" alt="">
+            دندان
+          </a>
+        </li>
+        <li class="allSpecialties">
+          <a  >
+            <img src="../../../assets/images/logos-svg/menu.svg" alt="">
+            <select class="ir-province" style="border:white;background: transparent;width: 100%;"
+                      >
+
+              <option value=""  disabled selected hidden>همه تخصص ها</option>
+              <option >قلب</option>
+            </select>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<app-footer></app-footer>

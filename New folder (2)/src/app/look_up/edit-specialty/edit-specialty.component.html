@@ -1,0 +1,66 @@
+<app-userd-navbar></app-userd-navbar>
+<app-sidbaradmin></app-sidbaradmin>
+ <ngx-loading [show]="loading"  [config]="{fullScreenBackdrop:true, tertiaryColour: '#9516d8c2' , primaryColour: '#9516d8c2'}" ></ngx-loading>
+
+
+<section  >
+    <div >
+        <div class="container" >
+            <div  class="row justify-content-center align-items-center">
+                <div class="col-md-5 " style="height:70% !important ; position: fixed; top:100px" >
+                <form [formGroup] = "AddForm" (ngSubmit) = "addfunc()" id="login-form" class="form " action="" method="post" style="border: 1px solid #0f0e0f; border-radius: 1rem;">
+                            
+                            <h3 class="text-right text-info mt-3 mr-3" style="font-size:13pt; color:#9400D3 !important"><i class="fa fa-plus-circle mt-3" aria-hidden="true"></i>&nbsp;<b> ویرایش تخصص</b></h3>
+                            <div class="form-group mt-4 mr-3 ml-3" style="text-align:justify; direction:rtl; color:black; font-size:10pt ">
+                                
+                                <label class=" mb-1 mr-2" > <i  class="fa fa-pencil-square-o" aria-hidden="true" style="color:#9400D3"></i> نام تخصص را وارد کنید:</label>
+                                <div class="col-12"> 
+                                    <input  type="text"  name="name" id="name" class="form-control mt-3 " style="font-size: 10pt;"
+                                    [ngClass]="{ 'is-invalid': submitted && f.name.errors }"
+                                    formControlName = "name">
+                                </div>
+                            </div>
+                                
+                            <div class="d-flex mt-4 ml-4" id="for-new-styles" style="width:100%; justify-content:space-between">
+                                <div class="w-20" style="margin-right: auto;margin-left: 23px;">
+     
+                                               <button type="submit" class="btn btn-primary mb-3 mx-2" style="font-size: 10pt;width: 100px;background-color: #9400D3; padding: 5px 25px">
+                                        <a class="text-decoration-none text-white">
+                                            تایید
+                                        </a>
+                                    </button>   
+                                    <button type="submit" (click)="returnto()"  class="btn btn-primary mb-3 mx-2" style="font-size: 10pt;width: 100px; background-color: #9400D3; padding: 5px 25px">
+                                        <a class="text-decoration-none text-white">
+                                            بازگشت
+                                        </a>
+                                    </button>                 
+                            </div>
+                                 
+                </div>           
+            </form>   
+            
+            <div class="form-group mt-1 mr-3 ml-3" style="text-align:justify; border-radius: 6pt; direction:rtl; color:black; font-size:10pt " >                            
+                <div class="col-12"> 
+
+                    <div class="w-80 px-3"  *ngIf="((submitted) && f.name.errors)   " style="color:red; font-size:8pt">
+                        <div *ngIf="f.name.errors.required" style="direction:rtl !important"> <b><i class="fas fa-exclamation-circle"></i> لطفا نام تخصص جدید را وارد نمایید.</b></div> 
+
+                    </div>
+                    <div class="w-80 px-3"  *ngIf="((submitted) && error1==1)   " style="color:red; font-size:8pt">
+                        <div  style="direction:rtl !important"> <b><i class="fas fa-exclamation-circle"></i> این نام قبلا ثبت شده است.</b></div> 
+
+                    </div>
+            </div> 
+            </div>   
+
+
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+

@@ -1,0 +1,473 @@
+.main{
+  width: 100%;
+  display: flex;
+  margin-top: 110px;
+  align-items: center;
+  justify-content: center;
+}
+
+.main .Carousel{
+  width: 70%;
+}
+
+.main .Carousel .test{
+  height: 400px;
+}
+//
+//.main .Carousel .test > img{
+//  border-radius: 25px;
+//}
+
+#mainpic{
+  height: 400px;
+}
+
+:host ::ng-deep .carousel-inner{
+  border-radius: 20px;
+}
+
+:host ::ng-deep .carousel-indicators{
+  display: none !important;
+}
+
+
+//<<==============================================================>>
+//<<=======================Search Box=============================>>
+//<<==============================================================>>
+
+.search{
+  position: absolute;
+  width: 60%;
+  z-index: 10;
+  margin-top: -160px;
+  margin-right: 80px;
+}
+
+.search .searchbar > form >input{
+  margin-right: 0 !important;
+}
+
+.form-control{
+  border-radius: 10px;
+}
+
+.d-flex .btn {
+  background-color: #9516D8;
+  border-color: #9516D8;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 12px;
+  cursor: pointer;
+  margin-right: -54px;
+  padding: 0 12px;
+}
+
+:host ::ng-deep #mat-form-field-label-1,
+:host ::ng-deep #mat-form-field-label-3{
+  //margin-left: 10px;
+  padding: 5px 0 0 0;
+}
+
+:host ::ng-deep .mat-form-field-flex{
+  padding-right: 0px !important;
+}
+
+:host ::ng-deep .mat-form-field-infix{
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+}
+
+:host ::ng-deep .mat-select-trigger{
+  margin-top: 2px;
+}
+
+:host ::ng-deep .mat-form-field-appearance-fill .mat-form-field-underline::before{
+  height: 0 !important;
+}
+
+:host ::ng-deep .mat-form-field-flex{
+  background-color: rgba(0, 0, 0, 0);
+}
+
+:host ::ng-deep .mat-form-field-appearance-fill .mat-form-field-ripple{
+  height: 0;
+}
+
+
+.search .county{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+//<<==============================================================>>
+//<<=======================Special List=============================>>
+//<<==============================================================>>
+
+.specialties {
+  display: flex;
+  justify-content: center;
+  margin-top: -50px;
+  position: relative;
+}
+
+
+.specialties .specialtiesList {
+  display: flex;
+  /* width: 92vmin;*/
+  width: 83%;
+  height: 150px;
+  border-radius: 20px;
+  background: white;
+  text-align: center;
+  align-items: center;
+  -webkit-box-shadow: 2px 4px 6px 0px #c5b9b9;
+  box-shadow: 2px 4px 6px 0px #c5b9b9;
+  padding-left: 0px;
+}
+
+.specialties .specialtiesList > li {
+  border-left: 1px solid #70707024;
+  padding: 36px 15px 10px 15px;
+  /*width: 16vmin;*/
+  width: 17%;
+  cursor: pointer;
+  height: 100%;
+}
+
+.specialties .specialtiesList > li:last-child {
+  border-left: none;
+}
+
+.specialties .specialtiesList > li > i {
+  display: block;
+  margin-bottom: 19px;
+  font-size: 32px;
+  cursor: pointer;
+  color: #9516D8;
+}
+
+.specialties .specialtiesList > li:last-child > i {
+  margin-bottom: 15px;
+}
+
+.specialties .specialtiesList > li > a {
+  color: #807777;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.specialties .specialtiesList > li > a > img{
+  width: 50px;
+  height: 40px;
+  margin-bottom: 15px;
+}
+
+
+.specialties .specialtiesList > li:hover {
+  /* Code for the gradient */
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #9516d880), color-stop(0.42, #ffffff));
+  background: -webkit-linear-gradient(bottom, #9516d880 0%, #ffffff 82%);
+  background: -moz-linear-gradient(bottom, #9516d880 0%, #ffffff 82%);
+  background: -o-linear-gradient(bottom, #9516d880 0%, #ffffff 82%);
+  background: -ms-linear-gradient(bottom, #9516d880 0%, #ffffff 82%);
+  background: linear-gradient(to top, #9516d880 0%, #ffffff 82%);
+
+}
+
+.specialties .specialtiesList > li:nth-child(1):hover {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.specialties .specialtiesList > li:nth-child(6):hover {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+
+
+//<<==============================================================>>
+//<<=======================\\\\\\\\\\\\\==========================>>
+//<<=======================Media Queries==========================>>
+//<<=======================/////////////==========================>>
+//<<==============================================================>>
+@media only screen and (max-width: 1500px) {
+  .specialties .specialtiesList {
+
+  }
+}
+
+@media only screen and (max-width: 1260px) {
+  #mainpic{
+    height: 360px;
+  }
+
+  .search{
+    margin-top: -150px;
+  }
+  .specialties .specialtiesList{
+    margin-left: -25px;
+  }
+}
+
+@media only screen and (max-width: 1110px) {
+  #mainpic{
+    height: 320px;
+  }
+
+  .search{
+    margin-top: -150px;
+    margin-right: 50px;
+  }
+
+  .specialties .specialtiesList{
+    margin-left: 15px;
+    width: 81%;
+  }
+
+}
+
+@media only screen and (max-width: 992px) {
+  .specialties .specialtiesList > li > a{
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .specialties .specialtiesList > li:nth-child(4) > i {
+    font-size: 32px;
+  }
+
+  .specialties .specialtiesList > li:nth-child(5) > i {
+    font-size: 35px !important;
+  }
+
+  .specialties .specialtiesList > li:last-child > i {
+    font-size: 36px !important;
+    margin-bottom: 10px;
+  }
+
+  .specialties .specialtiesList > li:last-child {
+    line-height: 18px;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+
+  :host ::ng-deep .mat-form-field-infix {
+    height: 36px;
+  }
+
+  .search .searchbar > input{
+    height: 36px;
+  }
+
+}
+
+#img{
+  background: url("../../../assets/images/images/mainpic11.jpg") no-repeat;
+  height: 100%;
+  background-position-x: -110px;
+  background-size: cover;
+
+}
+
+@media only screen and (max-width: 880px) {
+
+  :host ::ng-deep .carousel-control-prev{
+    margin-left: -25px;
+  }
+  :host ::ng-deep .carousel-control-next{
+    margin-right: -25px;
+  }
+
+  .search {
+    margin-top: -150px;
+    margin-right: 40px;
+  }
+
+  #mainpic{
+    height: 280px;
+  }
+
+  .specialties .specialtiesList {
+    height: 100px;
+  }
+
+  .specialties .specialtiesList > li > a > img{
+    width: 40px;
+    height: 30px;
+  }
+
+  .specialties .specialtiesList > li {
+
+    //&&padding: 25px 5px 0px 5px;
+
+    padding: 18px 5px 0px 5px;
+  }
+
+  .specialties .specialtiesList > li > i {
+    font-size: 23px;
+    margin-bottom: 7px;
+  }
+
+  .specialties .specialtiesList > li:nth-child(4) > i {
+    font-size: 28px !important;
+  }
+
+  .specialties .specialtiesList > li:nth-child(5) > i {
+    font-size: 28px !important;
+  }
+
+  .specialties .specialtiesList > li:nth-child(2) {
+    line-height: 17px;
+  }
+
+  .specialties .specialtiesList > li:last-child {
+    line-height: 16px;
+    padding-top: 23px;
+  }
+
+  .specialties .specialtiesList > li:last-child > i {
+    font-size: 33px !important;
+    margin-bottom: 4px;
+  }
+
+
+  .specialties .specialtiesList > li:nth-child(5) > a,
+  .specialties .specialtiesList > li:nth-child(4) > a,
+  .specialties .specialtiesList > li:nth-child(3) > a,
+  .specialties .specialtiesList > li:nth-child(1) > a {
+    font-size: 13px;
+  }
+
+  .specialties .specialtiesList > li > a {
+    font-size: 11px;
+  }
+
+
+}
+
+
+
+@media only screen and (max-width: 780px) {
+
+  .main .Carousel{
+    width: 80%;
+  }
+
+  #mainpic{
+    height: 240px;
+  }
+
+  .search {
+    margin-top: -150px;
+    margin-right: 70px;
+  }
+
+  :host ::ng-deep .carousel-control-prev{
+    margin-left: 0;
+  }
+  :host ::ng-deep .carousel-control-next{
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  #mainpic {
+    height: 180px;
+  }
+
+  .search {
+    margin-top: -180px;
+    margin-right: 60px;
+  }
+}
+
+
+@media only screen and (max-width: 580px) {
+
+  .search {
+    margin-top: -150px;
+    margin-right: 50px;
+  }
+
+  .search .searchbar > input{
+    margin-right: 0 !important;
+  }
+  .search {
+       margin-right: 50px;
+     }
+  .search .county{
+    width: 106%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+
+  .specialties .specialtiesList .orthopedics {
+    display: none;
+  }
+
+  .specialties .specialtiesList {
+    width: 83%;
+  }
+
+  .specialties .specialtiesList > li{
+    width: 20%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .main .Carousel{
+    width: 85%;
+  }
+
+  .search {
+    margin-right: 20px;
+    width: 73%;
+  }
+
+  :host ::ng-deep .ng-tns-c254-1,
+  :host ::ng-deep .ng-tns-c254-3{
+    font-size: 12px;
+  }
+
+}
+
+@media only screen and (max-width: 440px) {
+  .specialties .specialtiesList .ear_throat_nose {
+    display: none;
+  }
+
+  .specialties .specialtiesList > li{
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .main .Carousel{
+    width: 84%;
+  }
+
+  .search {
+    margin-right: 10px;
+    width: 70%;
+  }
+
+  .specialties {
+    width: 110%;
+    margin-right: -5px;
+    margin-top: -40px;
+  }
+
+}
+
+
+
+

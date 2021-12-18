@@ -1,0 +1,50 @@
+<header class="container-fluid">
+
+  <!--<div class="header">-->
+  <nav class="navbar navbar-expand-lg navbar-light container mx-auto">
+    <div class="container-fluid">
+      <div class="row col-12">
+        <div class="column1 flex col-9">
+          <a class="navbar-brand">
+            <img src="../../../assets/images/images/nobaan_logo.svg" alt="" width="70" height="60">
+          </a>
+          <button class="navbar-toggler" id="toggler" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation">
+            <span class="menu-logo"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav" id="activeToggle">
+              <a (click)="navigateTomain()" class="nav-link active alink" aria-current="page">
+                <img class="alink2" src="../../../assets/images/logos-svg/navbar-top-right/Iconly-Bold-Home-empty.png"
+                     id="getImage" onmouseover="changeImage()" alt="">
+                صفحه اصلی
+              </a>
+              <a (click)="navigateTodoctor()" class="nav-link doctors">
+                پزشکان
+              </a>
+              <a (click)="navigateTosecretary()" class="nav-link clerk">
+                منشی
+              </a>
+              <a (click)="navigateTooffice()" class="nav-link clinic">
+                مطب
+              </a>
+              <a (click)="navigateTobooking()" class="nav-link reserve">
+                رزرو نوبت
+              </a>
+              <a (click)="navigateTomanagebooking()" class="nav-link manageturn">
+                مدیریت نوبت
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="column2 col-3 navLeft">
+          <a (click)="Logout()" class="close">خروج</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+

@@ -1,0 +1,105 @@
+<section class="left-register-box" style="text-align: right">
+  <div class="choose-item">
+    <ul>
+      <li class="li1">
+        <a>
+          <img src="../../../assets/images/user-pages/icon-Bold-Price.png" alt="">
+          <div class="tooltip-register">متن 1</div>
+        </a>
+      </li>
+      <li class="li2">
+        <a>
+          <img src="../../../assets/images/user-pages/path-tag.png" alt="">
+          <div class="tooltip-register">متن 2</div>
+        </a>
+      </li>
+      <li class="li3">
+        <a>
+          <img src="../../../assets/images/user-pages/Iconly-Light-Notification.png" alt="">
+          <div class="tooltip-register">متن 3</div>
+        </a>
+      </li>
+      <li class="li4">
+        <a>
+          <img src="../../../assets/images/user-pages/Iconly-Light-Message.png" alt="">
+          <div class="tooltip-register">متن 4</div>
+        </a>
+      </li>
+      <li class="li5">
+        <a>
+          <img src="../../../assets/images/user-pages/path.png" alt="">
+          <div class="tooltip-register">تغییر رمز عبور</div>
+        </a>
+      </li>
+      <li class="li6">
+        <a (click)="Logout()" >
+          <img src="../../../assets/images/user-pages/Iconly-Light-Logout.png" alt="">
+          <div class="tooltip-register">خروج</div>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="mydoctors">
+    <div class="whole">
+      <div class="text">پزشکان من</div>
+      <ul class="doctorImages">
+        <li  class="one">
+          <a><img src="../../../assets/images/user-pages/mydoctors/+.png" alt=""></a>
+        </li>
+        <li class="two"  [hidden]="TheNumberOfUserDoctors < 1 " [ngClass]="{'online':Doctor1}">
+          <a><img src="{{url1}}" alt=""></a>
+        </li>
+        <li  class="three" [hidden]="TheNumberOfUserDoctors < 2 " [ngClass]="{'online':Doctor2}">
+          <a><img src="{{url2}}" alt=""></a>
+        </li>
+        <li  class="four" [hidden]="TheNumberOfUserDoctors < 3 " [ngClass]="{'online':Doctor3}">
+          <a><img src="{{url3}}" alt=""></a>
+        </li>
+        <li  class="five" [hidden]="TheNumberOfUserDoctors < 4 " [ngClass]="{'online':Doctor4}">
+          <a><img src="{{url4}}" alt=""></a>
+        </li>
+        <li  class="six" [hidden]="TheNumberOfUserDoctors < 5 " [ngClass]="{'online':Doctor5}">
+          <a><img src="{{url5}}" alt=""></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="insuranceInformation">
+    <div class="whole">
+      <div class="text">
+        <img src="../../../assets/images/user-pages/insurance/icon-Bold-Insurence.png" alt="">
+        اطلاعات بیمه
+      </div>
+      <div class="insuranceinfo">
+        <div class="right">
+          <div class="line1">
+            نوع بیمه:
+          </div>
+          <div class="line2">
+            تامین اجتماعی
+          </div>
+        </div>
+        <div class="left">
+          <div class="line1">تاریخ اعتبار:</div>
+          <div class="line2">۱۴۰۰/۶/۶</div>
+        </div>
+      </div>
+      <div class="getturn">
+        <div class="text-right">
+          دریافت نوبت با بیمه
+        </div>
+        <div class="text-left">
+          مجاز
+        </div>
+      </div>
+      <span class="getturnminus">
+        <a>
+          دریافت نوبت با کسر سهم بیمه
+        </a>
+      </span>
+    </div>
+  </div>
+
+</section>

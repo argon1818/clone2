@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  ncf:
+    build: .
+    image: $STACK:latest
+    deploy:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=traefik"
+        - "traefik.http.routers.$STACK.rule=Host(`$URL`)"
+        - "traefik.http.routers.$STACK.entrypoints=websecure"
+        - "traefik.http.routers.$STACK.tls=true"
+        - "traefik.http.routers.$STACK.tls.certresolver=letsencrypt"
+        - "traefik.http.routers.$STACK.service=$STACK"
+        - "traefik.http.services.$STACK.loadbalancer.server.port=80"
+      mode: replicated
+      replicas: 1
+    networks:
+      - traefik
+
+networks:
+  traefik:
+    external: true

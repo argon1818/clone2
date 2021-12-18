@@ -1,0 +1,77 @@
+
+<app-userd-navbar></app-userd-navbar>
+<app-sidbaradmin></app-sidbaradmin>
+ <ngx-loading [show]="loading"  [config]="{fullScreenBackdrop:true, tertiaryColour: '#9516d8c2' , primaryColour: '#9516d8c2'}" ></ngx-loading>
+
+<div>
+  <div id="login-row" class="row justify-content-center align-items-center">
+      <div  class="col-md-9" style="height:70% !important; top:100px " >
+      <div   id="login-form" class="form " action="" method="post" style="border: 1px solid #0f0e0f; border-radius: 1rem;">          
+        <h3  class="text-right text-info mt-3 mr-3" style="font-size:13pt; color:#9400D3 !important"><a  (click)="Navigatemanageaddsubspecialty()"  style="text-decoration:none; font-size:13pt; color:#9400D3 !important"> <i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp;<b>ثبت فوق تخصص و فلوشیپ</b> </a></h3>
+          <div class="container"  >     
+              <input type="text" style="direction:rtl" class="form-control    mb-4" placeholder="جستجو" [(ngModel)]='filterTerm'> 
+              <div class="table-responsive">
+ 
+                <table class="table " datatable [dtOptions]="dtOptions" style="direction:rtl; text-align:center">
+                  <thead>
+                    <tr >
+                      <th>ردیف </th>
+                      <th>نام فوق تخصص/فلوشیپ </th>
+                            <th>ویرایش </th>    
+
+                      <th>حذف </th> 
+                  
+                    </tr>
+                  </thead>
+                  <tbody>
+    
+      <tr *ngFor="let item of data| filter:filterTerm| paginate: configTable; let i=index;">
+        <td>
+          {{i+1 }} 
+
+
+        <td>
+        {{item.name_special}}
+        </td>
+        
+            <td> 
+         <a  (click)="Editspecialty(item.id)" style="text-decoration:none; font-size:13pt; color:#9400D3 !important"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> </a>
+
+        </td>
+        <td> 
+         <a (click)="Deletespecialty(item.id)"  style="text-decoration:none; font-size:13pt; color:#9400D3 !important"> <i class="fa fa fa-trash" aria-hidden="true"></i> </a>
+
+        </td>
+  
+
+      </tr> 
+      <td colspan="4">
+    
+      
+    </tbody>
+  </table>
+
+                     </div>  
+
+            
+             </div>  
+                                         
+            </div>                      
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+   
+</div>
+
+
+
+
+
+

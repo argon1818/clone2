@@ -1,0 +1,16 @@
+image: docker
+
+services:
+  - docker:dind
+
+build:
+  stage: build
+  script:
+    - docker login -p 76578124re -u sadaghiani
+    - docker-compose build --force-rm
+    
+deploy:
+  stage: deploy
+  script:
+    - docker stack deploy -c docker-compose.yml $STACK
+    - docker service update --force "$STACK"_"$SERVICE1"

@@ -1,0 +1,290 @@
+// .container-fluid .navbar{
+//     margin: 15px 0;
+// }
+
+
+header{
+  z-index: 999999999;
+}
+
+.navbar .container-fluid .row .column1 .collapse .navbar-nav > a {
+    font-size: 13px;
+    margin: 0 4px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.navbar .container-fluid .row .column1 .collapse .navbar-nav > a > img{
+    width: 20px;
+    margin-bottom: 6px;
+}
+
+.navbar .container-fluid .row .column1 .collapse .navbar-nav > a:visited > img{
+  content: url("../../../assets/images/logo.png");
+}
+
+// .navbar .container-fluid .row .column1 .collapse .navbar-nav .alink{
+//   margin-top: 5px;
+// }
+
+// .navbar .container-fluid .row .column1 .collapse .navbar-nav .alink .alink2.active{
+//   display: none;
+// }
+
+.navbar .container-fluid .row .column1 .collapse .navbar-nav > a:hover {
+    color: #9516D8 !important;
+}
+
+.navbar .container-fluid .row .column1 .collapse .navbar-nav > a > i {
+    display: block;
+    padding: 11px 0;
+}
+
+.navbar .container-fluid .row .column1 .navbar-brand {
+    margin-left: 15px;
+}
+
+.navbar .container-fluid .row .column1 .navbar-brand > img{
+  width: 100%;
+}
+
+.navbar .container-fluid .row .navLeft {
+    margin-top: 2vmin;
+    direction: ltr;
+    display: flex;
+}
+
+
+.navbar .container-fluid .row .navLeft .Consulting_GetTurn {
+    display: flex;
+    margin-right: 18px;
+}
+
+.navbar .container-fluid .row .navLeft .Consulting_GetTurn:after {
+    content: '';
+    // font-family: "Font Awesome 5 Pro";
+    background: url("../../../assets/images/logos-svg/navbar-top-left/headset\ \(1\).svg") no-repeat;
+    background-position: center;
+    color: #fff;
+    width: 50px;
+    font-size: 23px;
+    padding-top: 9px;
+    padding-bottom: 4px;
+    height: 3.2rem;
+    border-radius: 27px;
+    border-top-left-radius: 0;
+    font-weight: 100;
+    margin-right: 10px;
+    /* display: block; */
+    background-color: #9516D8;
+}
+
+.navbar .container-fluid .row .navLeft .Consulting_GetTurn .phoneNumber .span1 {
+    color: #878788;
+    letter-spacing: 4px;
+    font-size: 16px;
+}
+
+.navbar .container-fluid .row .navLeft .Consulting_GetTurn .phoneNumber .span2 {
+    color: #8408d0;
+    font-size: 21px;
+    margin-right: -10px;
+}
+
+.navbar .container-fluid .row .navLeft .Consulting_GetTurn .text {
+    color: #878788;
+    font-size: 14px;
+    margin-left: -6px;
+    display: block;
+    letter-spacing: 1.2px;
+}
+
+.navbar .container-fluid .row .navLeft .Register_Login {
+    height: 40px;
+    font-size: 14px;
+    border: 1px solid white;
+    -webkit-box-shadow: 1px 0px 4px 0px rgb(197 185 185);
+    box-shadow: 1px 0px 4px 0px rgb(197 185 185);
+    border-radius: 8px;
+    padding: 9px 8px 8px 30px;
+    margin-top: 6px;
+}
+
+.navbar .container-fluid .row .navLeft .Register_Login .Register > a:first-child {
+    border-left: 1px solid #efe6e6;
+    padding-left: 3px;
+}
+
+.navbar .container-fluid .row .navLeft .Register_Login .Register > a:last-child {
+  padding-right: 3px;
+}
+
+.navbar .container-fluid .row .navLeft .Register_Login .Register > a:hover {
+  color: #9516D8!important;
+}
+
+.navbar .container-fluid .row .navLeft .Register_Login .Register > a:last-child:after {
+    content: '';
+
+    background: url("../../../assets/images/logos-svg/navbar-top-left/Iconly-Light-AddUser.svg") no-repeat;
+    background-size:20px ;
+    margin-right: 3px;
+    color: #9516D8;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+
+
+
+}
+
+.container-fluid .navbar .container-fluid .row .column1 .navbar-toggler {
+    padding: 8px 12px;
+    margin-right: 8px;
+    border: 1px solid #9516D8;
+}
+
+
+.container-fluid .navbar .container-fluid .row .column1 .navbar-toggler:focus {
+    color: #e0cdfb;
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+
+.container-fluid .navbar .container-fluid .row .column1 .navbar-toggler .menu-logo:after{
+    content: '\f0c9';
+    font-family: "Font Awesome 5 Pro";
+    color: #9516D8;
+    font-weight: 400;
+}
+
+
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<======================repair========================>>>>>>>>>>>>>>>>>>>>>>>>
+
+header .navbar .container-fluid{
+    padding: 0 20px 0 25px;
+}
+
+
+
+
+/* Small devices (landscape phones, 1200px and up)*/
+@media only screen and (max-width: 1200px) {
+    .navbar .container-fluid .row .navLeft .Register_Login {
+        margin-right: -120px;
+    }
+
+    .navbar .container-fluid .row .navLeft .Register_Login .Register > a:last-child:after {
+        margin-right: 6px;
+    }
+    .navbar .container-fluid .row .navLeft .Consulting_GetTurn {
+      display: flex;
+      margin-right: 5px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #activeToggle{
+    background-color: #fff !important;
+    border-radius: 12px !important;
+    position: absolute;
+    margin-right: -73px;
+    margin-top: 30px;
+    padding: 5px 5px;
+    border: 1px dashed#9417d9;
+  }
+
+  .navbar .container-fluid .row .navLeft .Register_Login > .Register {
+    width: max-content;
+  }
+}
+@media only screen and (max-width: 768px) {
+    .navbar .container-fluid .row .navLeft .Consulting_GetTurn .phoneNumber {
+        display: none;
+    }
+    .navbar .container-fluid .row .navLeft .Consulting_GetTurn:after {
+      display: none;
+  }
+  .navbar .container-fluid .row .navLeft .Register_Login {
+    margin-left: -30px;
+  }
+}
+
+
+@media only screen and (max-width: 576px) {
+    .navbar .container-fluid .row .navLeft .Consulting_GetTurn .phoneNumber {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    .navbar .container-fluid .row .navLeft .Consulting_GetTurn .Register_Login{
+        margin-left: 18px;
+        margin-top: 9px;
+    }
+
+    .navbar .container-fluid .row .navLeft .Consulting_GetTurn{
+        margin-right: 0px;
+    }
+}
+
+@media only screen and (max-width: 465px) {
+    .navbar .container-fluid .row .navLeft .Consulting_GetTurn:after {
+        display: none;
+    }
+
+    // .navbar .container-fluid .row .navLeft .Register_Login {
+    //     margin-left: 61px;
+    // }
+
+    .navbar .container-fluid .row .navLeft .Consulting_GetTurn {
+        margin-right: -42px;
+    }
+
+    .navbar-brand {
+        margin-right: 0px;
+    }
+
+    .navbar .container-fluid .row .column1 .navbar-brand {
+        margin-left: 3px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+  .container-fluid .navbar .container-fluid .row .column1 .navbar-toggler{
+    margin-right: 40px;
+    margin-top: 10px;
+  }
+
+  .navbar .container-fluid .row .column1 .navbar-brand > img{
+    position: absolute;
+    width: 60px;
+    margin-right: -20px;
+    margin-top: -28px;
+  }
+
+  #activeToggle{
+    margin-top: 35px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+
+  .container-fluid .navbar .container-fluid .row .column1 .navbar-toggler{
+    margin-right: 15px;
+    margin-top: 10px;
+  }
+
+  .navbar .container-fluid .row .column1 .navbar-brand > img{
+    position: absolute;
+    width: 60px;
+    margin-right: -50px;
+    margin-top: -28px;
+  }
+
+}
+

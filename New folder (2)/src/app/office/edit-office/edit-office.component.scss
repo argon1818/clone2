@@ -1,0 +1,61 @@
+
+body {
+  font-family: "IRANSansWeb";
+    margin: 0;
+    padding: 0;
+    background-color: rgba(255, 253, 253, 0);
+    height: 60vh;
+
+  }
+  
+  #login .container #login-row #login-column #login-box {
+    margin-top: 120px;
+    max-width: 600px;
+    height: 290px;
+    border: 1px solid #0f0e0f;
+    border-radius: 1rem;
+    background-color: #ffffff;
+    
+  }
+  input::placeholder{
+    font-size: 0.7rem !important;
+    //color: #b0b4ba;
+  }
+  textarea::placeholder{
+    font-size: 0.7rem !important;
+    //color: #b0b4ba;
+  }
+  input{
+    font-size: 10pt !important;
+    //color: #b0b4ba;
+  }
+  textarea{
+    font-size: 10pt !important;
+    //color: #b0b4ba;
+  }
+  
+  
+  #login .container #login-row #login-column #login-box #login-form {
+    padding: 20px;
+  }
+  
+  #login .container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: -85px;
+  }
+  // Just enter the number 
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button {
+       -webkit-appearance: none;}
+
+              //<==============================New Styles============================>
+
+
+.register #register .container #login-row #login-column #login-form #for-new-styles .btn1:hover,
+.register #register .container #login-row #login-column #login-form #for-new-styles .btn2:hover{
+  background-color: #9516d8c2!important;
+}
+
+
+.register #register .container #login-row #login-column #login-form .text-right{
+  background-position-x: 380px;
+}

@@ -1,0 +1,67 @@
+<app-userd-navbar></app-userd-navbar>
+<ngx-loading [show]="loading"
+             [config]="{fullScreenBackdrop:true, tertiaryColour: '#9516d8c2' , primaryColour: '#9516d8c2'}"></ngx-loading>
+
+<div>
+  <section class="col-12 whole">
+    <div class="col-2  rightNavbar">
+      <app-sidbaradmin></app-sidbaradmin>
+    </div>
+
+    <div class="col-10 rightandleft ">
+      <div class="right">
+        <div class="first">
+          <div class="one">
+            <div class="top">
+              <b>تعداد کاربران </b>
+            </div>
+            <div class="bottom">
+              {{num_user}}
+            </div>
+          </div>
+          <div class="two">
+            <div class="top">
+              <b>تعداد پزشکان</b>
+            </div>
+            <div class="bottom">
+              {{num_doctor}}
+            </div>
+          </div>
+        </div>
+        <div class="left">
+          <div class="second">
+            <div class="three">
+              <div class="top">
+                <b> تعداد منشی ها </b>
+              </div>
+              <div class="bottom">
+                {{num_secretary}}
+              </div>
+            </div>
+            <div class="four">
+              <div class="top">
+                <b> تعداد مطب ها</b>
+              </div>
+              <div class="bottom">
+                {{num_office}}
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+  </section>
+  <div>
+
+  </div>
+</div>
+
+
+
+

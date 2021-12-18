@@ -1,0 +1,157 @@
+* {
+    font-family: 'vazir';
+  
+}
+.container1{
+  width:700px;
+  padding-top: 12px;
+  padding-bottom: 15px;
+  top: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  direction: rtl
+}
+.cartstyle{
+  
+  height: 160px;
+  border-radius: 20px;
+  border:0px solid rgb(192, 180, 180);
+  box-shadow: 0px 3px 3px 1px #bfcccc;
+}
+.img-responsive{
+    width: 115px;
+    height: 130px;
+    border-top-right-radius: 20px;
+    right: 0px;
+    top: 0px;
+    box-shadow: 0px 0px 3px 0px #bfcccc;
+    float: right;
+}
+.trapezoid{
+  vertical-align: middle;
+  border-bottom: 18px solid rgb(255, 255, 255);
+  border-left: 50px solid transparent;
+  border-top-left-radius:5px;
+  transform: translate(-8%,30%);
+  top: 130px;
+  height: 0;
+  width: 100px;}
+
+/* ---------- */
+
+.trapezoid {
+  position:absolute;
+}
+.trapezoid:after {
+  content:' ';
+  left:-14px;
+  top:-8px;
+  position:absolute;
+  background:rgb(255, 255, 255);
+  border-radius:45px 0 0 0;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 40px;
+  width:75px;
+  height:40px;
+  overflow: hidden;
+}
+.status-circle {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color:#02e03c;
+  border: 2px solid rgb(241, 246, 242);
+  top: 145px;
+  margin-right: 12px; 
+  float: right;  
+  position: absolute;
+  //vertical-align: middle;
+}
+
+
+#icon{
+  color:#bdbbbb;
+  padding-left: 12px;
+  line-height: 21px;
+  
+}
+.iconcheck{
+  color: rgba(149,22,217,255);
+}
+span {
+  font-size: 11px;
+  word-spacing: 3px;
+  line-height: 18px;
+  color:#aaa4a4;  ;
+}
+.textfamily{
+  color: black; font-weight: 700;
+}
+.textexpert{
+  color: rgba(149,22,217,255);
+}
+.itemsandresume{
+  
+  //width: 570px;
+  margin-left: 0px;
+  
+  
+}
+.items2{
+ // right: 0px;
+  padding-top: 20px;  
+  height: 100%;
+  transform: translateX(-6%);
+  margin-left: 0px;
+  padding-left: 0px;
+  float: right;
+  font-size: 11px;
+  direction: rtl;
+  
+}
+.resume{
+  //transform: translateX(-60%);
+  
+   width: 23%;
+   margin-top: 15px;
+   margin-left: 15px;
+   float: left ;
+   
+}
+.doctornumber{
+  
+  font-size: 10px;
+  padding: 15px 10px 1px 10px;
+  background-color: rgba(247,247,247,255);
+  border-radius: 10px;
+  bottom: 2px;
+  box-shadow: 0px 0px 1px 0px #bfcccc;
+  
+}
+.buttonresume
+  { font-size: 13px;
+    background-color: rgba(149,22,217,255);
+    margin-top: 10px;
+    width: 100%;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 14px;
+    color: beige;
+    text-decoration: none;
+    align-items: center;
+    height: 33px;
+    padding: 7px 20px 5px 20px;
+    display: block;
+    text-align: center;
+   box-shadow: 0px 6px 7px -6px #d3b0e6;  
+   -webkit-box-shadow: 0 10px 7px -6px #bf7de2;
+	 -moz-box-shadow: 0 10px 7px -6px #b378d3;
+   // box-shadow: 0px 10px 13px -7px #000000;
+   z-index: -1;
+    border: none;    
+    outline: none;
+    cursor: pointer;
+    //opacity: .2;
+  }
+  

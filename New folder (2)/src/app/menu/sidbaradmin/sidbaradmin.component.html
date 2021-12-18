@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+ <head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title></title>
+   <link rel="stylesheet" href="">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+ </head>
+
+
+  <div lang="en" dir="rtl">
+   <div class="menu-btn">
+     <i class="fa fa-chevron-circle-left" aria-hidden="true" ></i>
+   </div>
+   <div class="side-bar">
+     <div class="close-btn">
+       <i class="fas fa-times"></i>
+     </div>
+     <div class="menu" style="color:white">
+      <div class="item"><a (click)="Navigatemain()" ><i class="fas fa-desktop"></i>صفحه اصلی</a></div>
+
+
+
+       <div class="item">
+         <a class="sub-btn"><i class="fa fa-user-circle" aria-hidden="true"></i>کاربر<i class="fas fa-angle-left dropdown"></i></a>
+         <div class="sub-menu" style="text-indent: 30%; font-size: 10pt;">
+            <a  (click)="Navigatemanageuser()"  class="sub-item " style="font-size: 10pt;"><i class="fa fa-angle-left" aria-hidden="true"></i>مدیریت کاربر</a>  
+         </div>
+       </div>
+
+
+         <div class="item">
+         <a class="sub-btn"><i class="fa fa-user-md" aria-hidden="true"></i>پزشک<i class="fas fa-angle-left dropdown"></i></a>
+         <div class="sub-menu" style="text-indent: 30%; font-size: 10pt;">
+            <a (click)="Navigatemanagedoctor()" class="sub-item" style="font-size: 10pt;"><i class="fa fa-angle-left" aria-hidden="true"></i>مدیریت پزشک</a>
+
+         </div>
+       </div>
+
+
+       <div class="item">
+         <a class="sub-btn"><i class="fa fa-user-plus" aria-hidden="true"></i>منشی<i class="fas fa-angle-left dropdown"></i></a>
+         <div class="sub-menu" style="text-indent: 30%; font-size: 10pt;">
+            <a (click)="Navigatemanagesecretary()"  class="sub-item" style="font-size: 10pt;"><i class="fa fa-angle-left" aria-hidden="true"></i>مدیریت منشی</a>
+     
+         </div>
+       </div>
+
+
+              <div class="item">
+         <a class="sub-btn"><i class="fa fa-hospital-o" aria-hidden="true"></i>مطب <i class="fas fa-angle-left dropdown"></i></a>
+         <div class="sub-menu" style="text-indent: 30%; font-size: 10pt;">
+            <a (click)="Navigatemanageoffice()" class="sub-item" style="font-size: 10pt;"><i class="fa fa-angle-left" aria-hidden="true"></i>مدیریت مطب</a>  
+         </div>
+       </div>
+
+                     <div class="item">
+         <a class="sub-btn"><i class="fa fa-file" aria-hidden="true"></i> نوبت  <i class="fas fa-angle-left dropdown"></i></a>
+         <div class="sub-menu" style="text-indent: 30%; font-size: 10pt;">
+            <a (click)="Navigatemanageturn()" class="sub-item" style="font-size: 10pt;"><i class="fa fa-angle-left" aria-hidden="true"></i>زمان های ویزیت پزشک </a>  
+            <a (click)="Navigatemanagebooking()" class="sub-item" style="font-size: 10pt;"><i class="fa fa-angle-left" aria-hidden="true"></i>  رزرو نوبت </a>  
+
+         </div>
+       </div>
+       
+              <div class="item">
+         <a class="sub-btn"><i class="fa fa-cog" aria-hidden="true"></i>تنظیمات<i class="fas fa-angle-left dropdown"></i></a>
+         <div class="sub-menu" style="text-indent: 30%; font-size: 10pt;">
+            <a (click)="Navigatemanagepermission()" class="sub-item" style="font-size: 10pt;"><i class="fa fa-angle-left" aria-hidden="true"></i>مدیریت مجوز</a>
+           <a (click)="Navigatemanagerole()" class="sub-item" style="font-size: 10pt;"><i class="fa fa-angle-left" aria-hidden="true"></i>مدیریت نقش</a>
+           <a (click)="Navigatemanageassignrole()" class="sub-item" style="font-size: 10pt;"><i class="fa fa-angle-left" aria-hidden="true"></i>تخصیص نقش</a>    
+         </div>
+       </div>
+
+         <div class="item">
+         <a class="sub-btn"><i class="fa fa-spinner" aria-hidden="true"></i>پیش فرض ها<i class="fas fa-angle-left dropdown"></i></a>
+         <div class="sub-menu" style="text-indent: 30%; font-size: 10pt;">
+            <a (click)="Navigatemanagespecialty()"  class="sub-item" style="font-size: 10pt;"> <i class="fa fa-angle-left" aria-hidden="true"></i>تخصص</a>
+           <a (click)="Navigatemanagesubspecialty()" class="sub-item" style="font-size: 10pt;"><i class="fa fa-angle-left" aria-hidden="true"></i>فوق تخصص</a>
+           <a (click)="Navigatemanagetypevisit()" class="sub-item" style="font-size: 10pt;"><i class="fa fa-angle-left" aria-hidden="true"></i>انواع ویزیت</a>  
+             <a (click)="Navigatemanageinsurance()" class="sub-item" style="font-size: 10pt;"><i class="fa fa-angle-left" aria-hidden="true"></i>بیمه</a>  
+
+         </div>
+       </div>
+
+   </div>
+   </div>
+   
+
+      

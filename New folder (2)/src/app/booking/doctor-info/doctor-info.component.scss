@@ -1,0 +1,341 @@
+.containershow{
+    width: 1410px;
+    height:465px;
+    background: url(./../../../assets/images/Untitled.png);
+
+    background-size: cover;
+    position: relative;
+    direction: rtl;
+    text-align: right;
+    border-radius: 20px;
+    margin-top: 130px;
+    max-width: 80%;
+  
+  
+  }
+  .app-get-booking{
+    width:100%; 
+    height: 350px;
+    position:relative;
+     margin-bottom: 400px; 
+     margin-top: 30px;
+  }
+  .containershow .bottom-show{
+      width: 1435px;
+      background: url(./../../../assets/images/Subtraction.png)no-repeat;
+
+      background-position-x: -5px;
+      // background-position-y: -12px;
+      // border-top-left-radius: 60px;
+      // border-top-right-radius: 20px;
+      border-radius: 20px;
+      background-size: 100%;
+      position: absolute;
+      height: 200px;
+      bottom: 0px;
+      max-width: 100%;
+  
+  
+  }
+  .containershow .image-doctor2{
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 3px solid white;
+      background: url(./../../../assets/images/img_avatar.png);
+
+      position:absolute;
+      bottom: 36%;
+      right: 3.5%;
+  }
+  .itemsandresume{
+    
+      //width: 570px;
+      margin-left: 0px;
+      
+      
+    }
+    .items{
+     // right: 0px;
+      padding-top: 20px;  
+      height: 100%;
+      margin-left: 0px;
+      padding-left: 0px;
+      float: right;
+      font-size: 15spx;
+      direction: rtl;
+      text-align: right;
+      padding-right: 50px;
+      transform: translateY(28%);
+      line-height: 30px;
+      color: white;
+      
+    }
+    .resume{
+      //transform: translateX(-60%);
+      width: 242px;
+      margin-top: 50px;
+      margin-left: 50px;
+      float: left;
+      height: 103px;
+      background-color: #DDE0FF;
+      border-radius: 15px;
+      font-size: 15px;
+      border: 3px solid white;
+    }
+    .doctornumber{
+      
+      padding: 15px 10px 1px 10px;
+      
+    }
+    #icon{
+      width: 30px;
+      padding-left: 12px;
+      line-height: 25px;
+      
+    }
+    .iconcheck{
+      color: rgba(149,22,217,255);
+    }
+
+
+    //===============================
+
+
+    /* You can add global styles to this file, and also import other style files */
+* {
+  font-family:'vazir',;
+  font-size: 10pt;
+  direction: ltr;
+  
+}
+.main_container{
+  right: 50%;
+  -webkit-transform: translate(50%);
+  transform: translate(50%);
+  z-index: 100003;
+  width: 70%; 
+  align-items: center;
+  justify-content: center;
+  display: inline;
+  border-radius: 8px;
+  border: 1px solid #ededed;
+  padding: 30px 30px 45px 30px;
+  position:absolute;
+  top: 350px;
+  right: 50%;
+  -webkit-transform: translate(50%,5%);    
+  transform: translate(50%,-55%);
+}
+.main_container .calenderrow{
+  text-align: right;
+  margin-bottom: 10px;  
+}
+
+.main_container .radiobuttom_type_appointment{
+ margin-bottom: 50px;
+ color: #9516D8;
+ max-width: 50%;
+ margin: 10px 0;
+ font-size: 9px;
+ font-weight: 900;
+ line-height: 10px;
+ font-size: 9px;
+ padding-left: 10px;
+ padding-left: 50px;
+ padding-inline-start: 10px;
+ padding-bottom: 12px;
+
+}
+.trapezoid{
+vertical-align: middle;
+border-top: 40px solid rgb(255, 255, 255);
+border-left: 50px solid transparent;
+border-top-left-radius:5px;
+width: 400px;
+position: relative;
+right: 0px;
+}
+
+/* ---------- */
+
+.trapezoid {
+position:absolute;
+}
+// .trapezoid:after {
+//   content:' ';
+//   left:-14px;
+//   top:-8px;
+//   position:absolute;
+//   background:rgb(158, 17, 17);
+//   border-radius:45px 0 0 0;
+//   border-bottom-right-radius: 20px;
+//   border-top-left-radius: 40px;
+//   width:75px;
+//   height:40px;
+//   overflow: hidden;
+// }
+.main_container .radiobuttom_type_appointment form{
+transform: translatex(1%);
+}
+.main_container .radiobuttom_type_appointment form input{
+width: 10%;
+}
+.buttonreservation{
+background-color: #0066C6;
+// box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+// border-color:0px 0px 2px 0px rgba(0,0,0,0.1);
+
+
+font-size: 12pt;
+border-radius: 15px;
+width: 150px;
+height: 45px;
+color: #fffcfc;
+margin-top: 2%;
+font-weight: 900;
+}
+.radiobuttom_type_tody{
+
+background:url("./../../../assets/images/gdhfg.png")no-repeat;
+background-size: 1360px;
+transform: translateY(30%);
+z-index: 3;
+border-radius: 3px;
+color: #0066C6;
+border-bottom: 1px solid  #5f0e8a;;
+align-items: center;
+padding: 15px 15px 15px 0px;
+font-weight: 800;
+text-align: left;
+font-size: 12px;
+left: 0px;
+padding-left: 0px;
+
+
+
+ }
+
+.custom-select {
+margin: 0px;
+padding: 4px 0px;
+text-align: center;
+border: 1px solid #ddd;
+border-collapse: collapse;
+border-color: #ddd;
+outline: none;
+width: 50%;
+font-family:'iransans',;
+}
+
+h2 {
+  font-size: 26px;
+  margin: 20px 0;
+  text-align: center;
+  small {
+    font-size: 0.5em;
+  }
+}
+
+.main > h2 {
+  text-align: center;
+  color: blue;
+}
+
+.table,
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px 10px;
+  vertical-align: middle;
+  border-bottom-color: #e0e0e0;
+}
+
+th {
+  background-color: #f1f1f1;
+  border-bottom-color: #e0e0e0;
+}
+
+input {
+  margin: 0px;
+  padding: 4px 0px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  border-color: #ddd;
+  border-radius: 2px;
+  outline: none;
+  width: 20%;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  border-bottom-color: #e0e0e0;
+}
+
+@media (max-width: 500px) {
+  //  .calenderrow{
+    
+  //   font-size:smaller;
+    
+  //   text-align-last: left;
+  //   width: 500px;
+  //  }
+  .radiobuttom_type_tody{
+    
+  }
+  .table thead {
+    display: none !important;
+  }
+
+  .table tbody,
+  tr,
+  td {
+    display: block;
+    width: 100%;
+    height:100%;
+    float: right;
+   
+  }
+
+  .table tr {
+    margin-bottom: 15px;
+    height: 100%;
+    padding-bottom: 10px;
+    text-align: right;
+    width: 80%;
+  }
+
+  .table td {
+    text-align:right;
+    padding-right: 40%;
+   // text-align: center;
+  }
+
+  // .table tr:nth-child(first-child) {
+  //   text-align: center;
+  // }
+
+  .table td::before {
+    content: attr(data-name);
+    position: absolute;
+   // left: 0;
+    right: 10% ;
+    width:auto;
+    height: 50%;
+    //margin-bottom: 10px;
+   // padding-bottom: 10px;
+    text-align: right;
+    line-height: 5px;
+   // padding-left: 15px;
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+}
+
+    
+   
+    
+  

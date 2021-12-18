@@ -1,0 +1,133 @@
+img {
+    width: 20%;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    
+  }
+
+.whole{
+  display: flex;
+  max-width: 1520px;
+  margin-right: auto;
+  font-size: 12pt;
+ 
+  color: black;
+  margin-left: auto;
+}
+
+.whole .rightNavbar{
+  margin-right: 0px;
+}
+
+.whole .rightandleft{
+  text-align: right;
+  margin-top: 190px;
+  margin-right: -100px;
+}
+
+.whole .rightandleft .first{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.whole .rightandleft .second{
+  display: flex;
+  justify-content: space-around;
+}
+
+.whole .rightandleft .right .one,
+.whole .rightandleft .right .two,
+.whole .rightandleft .left .three,
+.whole .rightandleft .left .four{
+  width: 40%;
+  text-align: center;
+  // border: 1px solid #9516d8;
+  background: linear-gradient(to top, #f1f2f5 0%, #d0a3e9 64%);
+  border-radius: 30px;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  flex-direction: column;
+  display: flex;
+}
+
+
+.whole .rightandleft .right .one .top,
+.whole .rightandleft .right .two .top,
+.whole .rightandleft .left .three .top,
+.whole .rightandleft .left .four .top{
+  width: 100%;
+  // border-bottom: 1px solid #9516d8;
+  padding-bottom: 15px;
+}
+
+.whole .rightandleft .right .one .bottom,
+.whole .rightandleft .right .two .bottom,
+.whole .rightandleft .left .three .bottom,
+.whole .rightandleft .left .four .bottom{
+  width: 100%;
+  padding-top: 15px;
+}
+
+
+
+.whole .rightandleft .right .one .top::before{
+  content: '\f007';
+  font-family: "Font Awesome 5 Pro";
+  font-size: 18px;
+  color: #9516d8;
+  margin-left: 5px;
+}
+
+.whole .rightandleft .right .two .top::before{
+  content: '\f0f0';
+  font-family: "Font Awesome 5 Pro";
+  font-size: 18px;
+  color: #9516d8;
+  margin-left: 5px;
+}
+
+.whole .rightandleft .left .three .top::before{
+  content: '\f82d';
+  font-family: "Font Awesome 5 Pro";
+  font-size: 18px;
+  color: #9516d8;
+  margin-left: 5px;
+}
+
+.whole .rightandleft .left .four .top::before{
+  content: '\f7f2';
+  font-family: "Font Awesome 5 Pro";
+  font-size: 18px;
+  color: #9516d8;
+  margin-left: 5px;
+}
+
+
+
+
+//<<==============================================================================>>
+//<<=============================Media Queries==============================>>
+//<<==============================================================================>>
+
+@media only screen and (max-width: 768px) {
+.whole .rightandleft{
+  margin-right: -60px;
+}
+}
+
+@media only screen and (max-width: 650px) {
+  .whole .rightandleft{
+    margin-right: -40px;
+  }
+  }
+
+@media only screen and (max-width: 400px) {
+  .whole .rightNavbar{
+    margin-right: 0px;
+  }
+}
+
+

@@ -1,0 +1,110 @@
+
+
+<!--............................................... sidbar&navbar ......................................................... -->
+<app-navbar-main></app-navbar-main>
+<!-- <app-sidbar2></app-sidbar2> -->
+<app-sidbar-icon></app-sidbar-icon>
+ <ngx-loading [show]="loading"  [config]="{fullScreenBackdrop:true, tertiaryColour: '#9516d8c2' , primaryColour: '#9516d8c2'}" ></ngx-loading>
+
+
+
+<!--............................................... login form ......................................................... -->
+<section id="login"class="">
+    <div id="login">
+        <div class="container " >
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div  *ngIf="loginPart1" id="login-box" class="col-md-12">
+
+<!--............................................... start form ......................................................... -->
+
+                        <form  [formGroup] = "loginForm" (ngSubmit) = "logins()" id="login-form" class="form  " >
+
+                            <h3 class="text-right text-info mt-1" style="font-size:12pt; color:#9400D3 !important">ورود/ ثبت نام</h3>
+
+                            <div class="form-group mt-4 mobile1" style="text-align:justify; direction:rtl; color:black; font-size:10pt ">
+
+                                <label class=" mb-3 mobile2" for="username">شماره موبایل خود را وارد کنید:</label><br>
+                                <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"   maxlength="11" name="username" id="username" class="form-control mt-1 " formControlName = "phone_num" placeholder="برای مثال : ۰۹۱۲۳۴۵۶۷۸۹">
+                            </div>
+
+                            <div class="form-group logInNobaan" style="font-size:12pt; color:#9400D3 !important">
+                                <input  type="submit" name="submit" class="btn mt-2  w-100"  style="background-color:#9516D8; color:white" value="ورود به نوبان">
+                            </div>
+
+                            <div *ngIf=" (submitted && f.phone_num.errors)" style="direction:rtl !important">
+                                    <div *ngIf="f.phone_num.errors.required" class="input-headline phone1" style="color: rgb(187, 31, 31);" >
+                                       شماره تلفن وارد نشده است. 
+                                    </div>
+
+                                    <div *ngIf="f.phone_num.errors.pattern" class="input-headline phone2" style="color: rgb(187, 31, 31);" >
+                                        شماره تلفن وارد شده معتبر نیست.
+                                    </div>
+
+                                </div>
+                                <div *ngIf="submitted && expire==203" class="input-headline phone3" style="color: rgb(187, 31, 31);" >
+                                        دو دقیقه دیگر تلاش کنید.
+                                </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--............................................... start form2 ......................................................... -->
+
+    <div id="login" class="login2"  style="border-radius: 4px; border-color: coral;">
+        <div class="container " >
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div *ngIf="loginPart2" id="login-box" class="col-md-12 loginboxshadow">
+
+                        <form [formGroup] = "loginForm2" (ngSubmit) = "verifys()" id="login-form2" class="form" action="" method="post">
+
+                            <h3 class="text-right text-info mt-3" style="font-size:12pt; color:#9400D3 !important">کلمه عبور</h3>
+
+                            <div  class="form-group mt-4" id="changePhoneNumber1" style="text-align:right; direction:rtl; color:black; font-size:10pt ">
+                                <label class=" mb-3" for="username"> <i class="fa fa-exclamation" aria-hidden="true" style="color:#9400D3">
+                                </i> کلمه عبور به شماره تلفن شما ارسال خواهد شد. آن را وارد نمایید. </label><br>
+
+                                <p>
+                                    <a (click)="repass1()" class="mb-2"  style="color:#9400D3; font-size: 8pt; direction: ltr; text-align: left; float:left ;
+                                    text-decoration: underline; text-underline-position:under; line-break: auto; "> تغییر شماره موبایل</a>
+
+                                    <a style="color:#9400D3; font-size: 8pt; direction: ltr; text-align: right;float:right;
+                                    text-decoration: underline; text-underline-position:under; ">{{phone}}</a>
+                                </p>
+
+                            </div>
+
+                            <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"   maxlength="6" name="password" class="form-control mt-1" formControlName = "password">
+                            <div   class="form-group inputform " style="font-size:12pt; color:#9400D3 !important">
+
+                                <input  type="submit"  class="btn mt-3  w-100 mb-3 inputform2" style="background-color:#9400D3; color:white" value="ادامه">
+                                    <p>
+                                        <a *ngIf="counter>0; " class="mb-2" style="font-size: 8pt; direction: ltr; text-align: left; float:left ;
+                                                text-decoration: underline; text-underline-position:under; line-break: auto; "> ارسال دوباره کلمه عبور با پیامک</a>
+                                        <a  *ngIf="counter==0; " (click)="resendcod()" name="submit"   class="mb-2" style="color:#9400D3; font-size: 8pt; direction: ltr; text-align: left; float:left ;
+                                                text-decoration: underline; text-underline-position:under; line-break: auto; "> ارسال دوباره کلمه عبور با پیامک
+                                        </a>
+
+                                        <a style=" font-size: 8pt; direction: ltr; text-align: right;float:right;
+                                                    text-decoration: underline; text-underline-position:under; "> {{counter | formatTime}} </a>
+                                    </p>
+                            </div>
+
+                            <div *ngIf="error_form2==404" class="input-headline mt-0 pass1" style="color: rgb(187, 31, 31);" >
+                                        رمز عبور صحیح نیست.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--............................................... footer ......................................................... -->
+<app-footer></app-footer>
+
+

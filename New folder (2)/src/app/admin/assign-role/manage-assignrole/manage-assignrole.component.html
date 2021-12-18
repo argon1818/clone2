@@ -1,0 +1,99 @@
+<app-userd-navbar></app-userd-navbar>
+<app-sidbaradmin></app-sidbaradmin>
+ <ngx-loading [show]="loading"  [config]="{fullScreenBackdrop:true, tertiaryColour: '#9516d8c2' , primaryColour: '#9516d8c2'}" ></ngx-loading>
+
+<div>
+  <div class="row justify-content-center align-items-center">
+      <div  class="col-md-9" style="height:70% !important; top:100px " >
+      <div   id="login-form" class="form " action="" method="post" style="border: 1px solid #0f0e0f; border-radius: 1rem;">          
+        <h3  class="text-right text-info mt-3 mr-3" style="font-size:13pt; color:#9400D3 !important"><h3 style="text-decoration:none; font-size:13pt; color:#9400D3 !important"> <i class="fa fa-cog" aria-hidden="true"></i>&nbsp; <b>مدیریت نقش های کاربر </b></h3></h3>
+  
+        <div class="container mt-4"  >   
+  
+              <input type="text" style="direction:rtl;font-size: 10pt;" class="form-control mb-4" placeholder="جستجو" [(ngModel)]='filterTerm'> 
+              <div class="table-responsive">
+ 
+                <table class="table" datatable  style="direction:rtl; text-align:center">
+                  <thead>
+                    <tr >
+                      <th> ردیف</th>
+                      <th>نام </th>
+                      <th>نام خانوادگی</th>
+                      <th>شماره تماس </th>  
+                       <th>نقش ها  </th>  
+
+                      <th> ویرایش   </th> 
+
+                      <th>حذف تمام نقش ها   </th>    
+                      <!-- <th>مشاهده </th>       -->
+  
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr *ngFor="let item of users| filter:filterTerm| paginate: configtable; let i=index;">
+                
+                     <td>
+                     {{i+1 }}
+              
+                     </td>
+                      <td>
+                      {{item.name}}
+                      </td>
+                      <td>
+                      {{item.surname}}
+                      </td>
+                   
+                              <td>
+                      {{item.phone_num}}
+                      </td>
+                      <td>
+                      {{item.roles}}
+                      </td>
+      
+                      <td> 
+                        <a  (click)="Editassignrole(item.id)" style="text-decoration:none; font-size:13pt; color:#9400D3 !important"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> </a>
+  
+                </td>
+                
+                 <td> 
+                        <a (click)="Deleteassignrole(item.id)"  style="text-decoration:none; font-size:13pt; color:#9400D3 !important"> <i class="fa fa fa-trash" aria-hidden="true"></i> </a>
+  
+                </td>
+                <td> 
+                  <!-- <a (click)="ViewUsers(item.id)"  style="text-decoration:none; font-size:13pt; color:#9400D3 !important"> <i class="fas fa-eye"></i> </a>
+
+          </td> -->
+                    </tr> 
+
+                    
+
+                    <td colspan="4">
+                  
+                    
+                  </tbody>
+                </table>
+            </div>  
+          </div>                                   
+        </div>                      
+    </div>
+</div> 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,104 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.rtl.min.css"
+    integrity="sha384-LPvXVVAlyPoBSGkX8UddpctDks+1P4HG8MhT7/YwqHtJ40bstjzCqjj+VVVDhsCo" crossorigin="anonymous">
+ <ngx-loading [show]="loading"  [config]="{fullScreenBackdrop:true, tertiaryColour: '#9516d8c2' , primaryColour: '#9516d8c2'}" ></ngx-loading>
+
+<div class="main_container" style="max-width:100%;height:auto;" >
+    <div class="calenderrow" >
+        <i class="fa fa-calendar" aria-hidden="true" style="position:absolute; right:5%; transform: translatey(50%);"></i>
+        <input type="text" #datepickerInput (input) = "GetDateFunction($event)"/>
+
+        <ng-persian-datepicker 
+        [input]="datepickerInput"
+        [dateFormat]="'jYYYY-jMM-jDD'"
+        [uiTheme]="'default'"
+        [timeMeridian]="false"
+        [uiContainerWidth]="'100px'"
+        [uiAutoPosition]="false"
+        [timeEnable]="false"
+        style="position: absolute;
+        width: 220px;
+        margin-left: -212px;
+        margin-top: 50px;
+        z-index: 2"
+                        >
+        </ng-persian-datepicker>
+    </div>
+
+    <div class="radiobuttom_type_appointment">
+        <form >
+            <input value="moshavere" type="radio" name="time" >
+            <label for="moshavere">مشاوره متنی </label>
+            <input  value="telefhoni" type="radio"  name="time" >
+            <label for="telefhoni">مشاوره تلفنی </label>
+            <input  value="tasviri" type="radio"  name="time" >
+            <label for="tasviri">مشاوره تصویری </label>
+            <input  value="hozoori" type="radio"  name="time" [checked]="true" >
+            <label for="hozoori">حضوری </label>
+            
+        </form> 
+        
+    </div>
+
+    <div>
+        
+            
+            <div class="radiobuttom_type_tody" >
+                
+                <form (input) = "GettimeFunction($event)" style="padding-left:20px;">
+                    <label style="color:#5e4d8b;">{{x}} ماه </label>
+                    <label for="firsttime" style="position:absolute;transform:translatex(50%) ">اولین وقت خالی</label>
+                    <input  value="firsttime" type="radio"  name="time" [checked]="true" style="transform:translatex(30%)" >
+                    <label for="today" style="position:absolute; padding-left:15px;transform:translatex(30%)">امروز</label>
+                    <input value="today" type="radio" style="width: 10%;transform:translatex(30%)"  name="time" >
+                    
+                    
+                  </form> 
+                  
+            </div>
+       
+        <table class="table" id="myTable" style="color:#4B4279">
+            <thead  style="height: 70px; border-bottom: 1px solid #ddd;">
+                <tr>
+                    <th value="Friday"style="">جمعه</th>
+                    <th value="Thursday">پنجشنبه</th>
+                    <th  value="Wednesday">چهارشنبه</th>
+                    <th value="Tuesday">سه شنبه </th>
+                    <th value="Monday">دوشنبه</th>
+                    <th value="Sunday">یکشنبه</th>
+                    <th value="Saturday">شنبه</th>
+                    <th> نوبت</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                <tr class="week" style="height: 120px;">
+                    <td data-name="شنبه" value="Saturday"></td>
+                    <td data-name="یکشنبه" value="Sunday"></td>
+                    <td data-name="دوشنبه" value="Monday"> </td>
+                    <td data-name="سه‌شنبه" value="Tuesday"></td>
+                    <td data-name="چهارشنبه" value="Wednesday"></td>
+                    <td data-name="پنجشنبه" value="Thursday"></td>
+                    <td data-name="جمعه" value="Friday"></td>
+                    <td data-name="نوبت">صبح</td>
+
+                </tr>
+                <tr style="height: 120px;">
+                    <td data-name="شنبه"></td>
+                    <td data-name="یکشنبه"></td>
+                    <td data-name="دوشنبه"> </td>
+                    <td data-name="سه‌شنبه"></td>
+                    <td data-name="چهارشنبه"></td>
+                    <td data-name="پنجشنبه"></td>
+                    <td data-name="جمعه"></td>
+                    <td data-name="نوبت">عصر    </td>
+
+                </tr>
+                
+
+            </tbody>
+
+        </table>
+    </div>
+    <button (click)="getturn()" class="buttonreservation">دریافت نوبت</button>
+</div>
